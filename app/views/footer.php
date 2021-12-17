@@ -7,7 +7,7 @@
         <a href="#" title="">Projects</a>
         <a href="#" title="">Clients</a>
         <a href="#" title="">Testimonials</a>
-        <a href="contact.html" title="">Contact</a>
+        <a href="#" title="">Contact</a>
     </div>
 </div>
 

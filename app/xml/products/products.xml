@@ -16,14 +16,14 @@
         <size>14.5</size>
         <camera>BisonCam,NB Pro</camera>
         <price>11000</price>
-        <img src="imges/product2.jpeg"/>
+        <img src="public/uploads/product1.jpg"/>
     </product>
 
     <product>
         <productID>2</productID>
         <type>laptop</type>
         <mark>SAMSUNG</mark>
-        <model>GALAXY S25</model>
+        <model>GALAXY S25U</model>
         <cpu>Cortex A55</cpu>
         <ram>8</ram>
         <storage>255</storage>
@@ -31,7 +31,7 @@
         <size>14.5</size>
         <camera>108 megapixel</camera>
         <price>10000</price>
-        <img src="imges/product2.jpeg"/>
+        <img src="public/uploads/product2.jpg"/>
     </product>
 
 </products>

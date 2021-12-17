@@ -10,7 +10,7 @@
         <email>Omari.walid@gmail.com</email>
         <password>Admin@123</password>
         <phone>0665656565</phone>
-        <img src="/res/image.jpeg"/>
+        <img src="../../../public/uploads/user1.jpg"/>
     </user>
     <user>
         <userID>2</userID>
@@ -20,6 +20,6 @@
         <email>dkhissi.ayoub@gmail.com</email>
         <password>Admin@123555</password>
         <phone>0698989898</phone>
-        <img src="/res/tinyWiny.jpeg"/>
+        <img src="../../../public/uploads/user2.jpg"/>
     </user>
 </users>
