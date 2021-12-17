@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://www.w3schools.com"
+           xmlns="https://www.w3schools.com"
+           elementFormDefault="qualified">
+
+    <xs:element name="products" type="productsType"/>
+
+    <!--Defined Types-->
+
+    <!--products is a sequence of product with no limit on occurrences-->
+    <xs:complexType name="productsType">
+        <xs:sequence>
+            <xs:element name="product" type="productType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--product is a sequence of elements that are obligatory and should appear on that exact order-->
+    <xs:complexType name="productType">
+        <xs:sequence>
+            <xs:element name="productID" type="xs:unsignedInt"/>
+            <xs:element name="type" type="productTypeType"/>
+            <xs:element name="mark" type="xs:string"/>
+            <xs:element name="model" type="xs:string"/>
+            <xs:element name="cpu" type="xs:string"/>
+            <xs:element name="ram" type="xs:unsignedInt"/>
+            <xs:element name="storage" type="xs:unsignedInt"/>
+            <xs:element name="gpu" type="xs:string"/>
+            <xs:element name="size" type="unsignedDouble"/>
+            <xs:element name="camera" type="xs:string"/>
+            <xs:element name="price" type="unsignedDouble"/>
+            <xs:element name="img" type="imgType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--Restriction on type : must be 'laptop' or 'phone' we can add more later...-->
+    <xs:simpleType name="productTypeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="laptop"/>
+            <xs:enumeration value="phone"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Restriction on price : must be positive-->
+    <xs:simpleType name="unsignedDouble">
+        <xs:restriction base="xs:double">
+            <xs:minInclusive value="0.0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--img is an empty tag with one attribute size-->
+    <xs:complexType name="imgType">
+        <xs:attribute name="src" type="xs:string"/>
+    </xs:complexType>
+
+
+</xs:schema>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users xmlns="https://www.w3schools.com"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="https://www.w3schools.com users.xsd">
+    <user>
+        <userID>1</userID>
+        <username>walid_omari</username>
+        <firstName>Walid</firstName>
+        <lastName>Omari</lastName>
+        <email>Omari.walid@gmail.com</email>
+        <password>Admin@123</password>
+        <phone>0665656565</phone>
+        <img src="/res/image.jpeg"/>
+    </user>
+    <user>
+        <userID>2</userID>
+        <username>ayoub_dkhissi</username>
+        <firstName>Ayoub</firstName>
+        <lastName>Dkhissi</lastName>
+        <email>dkhissi.ayoub@gmail.com</email>
+        <password>Admin@123555</password>
+        <phone>0698989898</phone>
+        <img src="/res/tinyWiny.jpeg"/>
+    </user>
+</users>

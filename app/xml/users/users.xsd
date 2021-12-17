@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://www.w3schools.com"
+           xmlns="https://www.w3schools.com"
+           elementFormDefault="qualified">
+    
+    <xs:element name="users" type="usersType"/>
+
+
+    <!--Defined Types-->
+
+    <!--users is a sequence of user with no limit on occurrences-->
+    <xs:complexType name="usersType">
+        <xs:sequence>
+            <xs:element name="user" type="userType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--user is a sequence of elements that are obligatory and should appear on that exact order-->
+    <xs:complexType name="userType">
+        <xs:sequence>
+            <xs:element name="userID" type="xs:unsignedInt"/>
+            <xs:element name="username" type="usernameType"/>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="email" type="emailType"/>
+            <xs:element name="password" type="xs:string"/>
+            <xs:element name="phone" type="phoneNumberType"/>
+            <xs:element name="img" type="imgType" maxOccurs="1" minOccurs="0"/> <!--Img is optional-->
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--Restriction on username: should not have any white spaces-->
+    <xs:simpleType name="usernameType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^\s]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Restriction on email: must respect the email pattern-->
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9a-zA-Z_.?]+@[a-zA-Z]+.[a-z]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Restriction on phone number: must respect the phone number pattern-->
+    <xs:simpleType name="phoneNumberType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{10}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--img is an empty tag with one attribute size-->
+    <xs:complexType name="imgType">
+        <xs:attribute name="src" type="xs:string"/>
+    </xs:complexType>
+
+
+</xs:schema>
+

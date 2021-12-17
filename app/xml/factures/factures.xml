@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<factures xmlns="https://www.w3schools.com"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="https://www.w3schools.com factures.xsd">
+
+    <facture>
+        <factureID>1</factureID>
+        <userID>2</userID>
+        <userFirstName>Ayoub</userFirstName>
+        <userLastName>Dkhissi</userLastName>
+        <userPhone>0698989898</userPhone>
+        <date>2021-07-15T20:12:00</date>
+        <products>
+            <product>
+                <description>Phone SAMSUNG GALAXY S25</description>
+                <quantity>5</quantity>
+                <unitPrice>10000</unitPrice>
+                <allPrice>50000</allPrice>
+            </product>
+            <product>
+                <description>laptop HP Pavillon i7-10075H, 16Ram, 512SSD, Nvidia RTX-2060, 14.5 inches, Camera 'BisonCam,NB Pro'</description>
+                <quantity>1</quantity>
+                <unitPrice>15000</unitPrice>
+                <allPrice>15000</allPrice>
+            </product>
+        </products>
+        <totalPrice>65000</totalPrice>
+    </facture>
+    <facture>
+        <factureID>2</factureID>
+        <userID>1</userID>
+        <userFirstName>Walid</userFirstName>
+        <userLastName>Omari</userLastName>
+        <userPhone>0665656565</userPhone>
+        <date>2002-05-30T09:00:00</date>
+        <products>
+            <product>
+                <description>laptop HP Pavillon i7-10075H, 16Ram, 512SSD, Nvidia RTX-2060, 14.5 inches, Camera 'BisonCam,NB Pro'</description>
+                <quantity>3</quantity>
+                <unitPrice>15000</unitPrice>
+                <allPrice>45000</allPrice>
+            </product>
+        </products>
+        <totalPrice>45000</totalPrice>
+    </facture>
+</factures>

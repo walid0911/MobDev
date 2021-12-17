@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://www.w3schools.com"
+           xmlns="https://www.w3schools.com"
+           elementFormDefault="qualified">
+
+    <!--Managers are the same as users-->
+
+    <xs:element name="managers" type="managersType"/>
+
+
+    <!--Defined Types-->
+
+    <xs:complexType name="managersType">
+        <xs:sequence>
+            <xs:element name="manager" type="managerType" maxOccurs="unbounded"/>
+        </xs:sequence>
+
+    </xs:complexType>
+
+    <xs:complexType name="managerType">
+        <xs:sequence>
+            <xs:element name="managerID" type="xs:integer"/>
+            <xs:element name="username" type="usernameType"/>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="email" type="emailType"/>
+            <xs:element name="password" type="xs:string"/>
+            <xs:element name="phone" type="phoneNumberType"/>
+            <xs:element name="img" type="imgType" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:simpleType name="usernameType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^\s]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9a-zA-Z_.?]+@[a-zA-Z]+.[a-z]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="phoneNumberType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{10}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="imgType">
+        <xs:attribute name="src" type="xs:string"/>
+    </xs:complexType>
+
+
+</xs:schema>
+

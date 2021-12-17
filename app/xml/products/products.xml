@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products xmlns="https://www.w3schools.com"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="https://www.w3schools.com products.xsd">
+
+
+    <product>
+        <productID>1</productID>
+        <type>laptop</type>
+        <mark>HP</mark>
+        <model>Pavillon</model>
+        <cpu>i7-10075H</cpu>
+        <ram>16</ram>
+        <storage>512</storage>
+        <gpu>Nvidia RTX-2060</gpu>
+        <size>14.5</size>
+        <camera>BisonCam,NB Pro</camera>
+        <price>11000</price>
+        <img src="imges/product2.jpeg"/>
+    </product>
+
+    <product>
+        <productID>2</productID>
+        <type>laptop</type>
+        <mark>SAMSUNG</mark>
+        <model>GALAXY S25</model>
+        <cpu>Cortex A55</cpu>
+        <ram>8</ram>
+        <storage>255</storage>
+        <gpu>Mali-G77 MP11</gpu>
+        <size>14.5</size>
+        <camera>108 megapixel</camera>
+        <price>10000</price>
+        <img src="imges/product2.jpeg"/>
+    </product>
+
+</products>
