@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            targetNamespace="https://www.w3schools.com"
            xmlns="https://www.w3schools.com"
@@ -18,10 +19,9 @@
     <!--facture is a sequence of elements that are obligatory and should appear on that exact order-->
     <xs:complexType name="factureType">
         <xs:sequence>
-        <xs:element name="factureID" type="xs:integer"/>
+            <xs:element name="factureID" type="xs:integer"/>
             <xs:element name="userID" type="xs:integer" />
-            <xs:element name="userFirstName" type="FLNameType"/>
-            <xs:element name="userLastName" type="FLNameType"/>
+            <xs:element name="userName" type="userNameType" />
             <xs:element name="userPhone" type="phoneNumberType"/>
             <xs:element name="date" type="xs:dateTime"/> <!--date format: yyyy-mm-ddThh:min:sec-->
             <xs:element name="products" type="productsType"/>
@@ -29,12 +29,12 @@
         </xs:sequence>
     </xs:complexType>
 
-    <!--Restriction on first name and last name: should not contain any numerical character-->
-    <xs:simpleType name="FLNameType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[a-zA-Z]+"/>
-        </xs:restriction>
-    </xs:simpleType>
+    <xs:complexType name="userNameType">
+        <xs:sequence>
+            <xs:element name="userFirstName" type="xs:string"/>
+            <xs:element name="userLastName" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
 
     <!--Restriction on phone number-->
     <xs:simpleType name="phoneNumberType">
