@@ -43,7 +43,7 @@
                         <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Settings</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
                     </ul>
 
                     <form id="logout-form" action="#" method="POST" class="d-none">
