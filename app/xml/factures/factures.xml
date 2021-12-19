@@ -6,8 +6,10 @@
     <facture>
         <factureID>1</factureID>
         <userID>2</userID>
-        <userFirstName>Ayoub</userFirstName>
-        <userLastName>Dkhissi</userLastName>
+        <userName>
+            <userFirstName>Ayoub</userFirstName>
+            <userLastName>Dkhissi</userLastName>
+        </userName>
         <userPhone>0698989898</userPhone>
         <date>2021-07-15T20:12:00</date>
         <products>
@@ -25,22 +27,5 @@
             </product>
         </products>
         <totalPrice>65000</totalPrice>
-    </facture>
-    <facture>
-        <factureID>2</factureID>
-        <userID>1</userID>
-        <userFirstName>Walid</userFirstName>
-        <userLastName>Omari</userLastName>
-        <userPhone>0665656565</userPhone>
-        <date>2002-05-30T09:00:00</date>
-        <products>
-            <product>
-                <description>laptop HP Pavillon i7-10075H, 16Ram, 512SSD, Nvidia RTX-2060, 14.5 inches, Camera 'BisonCam,NB Pro'</description>
-                <quantity>3</quantity>
-                <unitPrice>15000</unitPrice>
-                <allPrice>45000</allPrice>
-            </product>
-        </products>
-        <totalPrice>45000</totalPrice>
     </facture>
 </factures>
