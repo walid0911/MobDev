@@ -20,14 +20,21 @@
         <xs:sequence>
         <xs:element name="factureID" type="xs:integer"/>
             <xs:element name="userID" type="xs:integer" />
-            <xs:element name="userFirstName" type="xs:string"/>
-            <xs:element name="userLastName" type="xs:string"/>
+            <xs:element name="userFirstName" type="FLNameType"/>
+            <xs:element name="userLastName" type="FLNameType"/>
             <xs:element name="userPhone" type="phoneNumberType"/>
             <xs:element name="date" type="xs:dateTime"/> <!--date format: yyyy-mm-ddThh:min:sec-->
             <xs:element name="products" type="productsType"/>
             <xs:element name="totalPrice" type="unsignedDouble"/>
         </xs:sequence>
     </xs:complexType>
+
+    <!--Restriction on first name and last name: should not contain any numerical character-->
+    <xs:simpleType name="FLNameType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z]+"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <!--Restriction on phone number-->
     <xs:simpleType name="phoneNumberType">

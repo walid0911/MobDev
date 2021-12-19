@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<users xmlns="https://www.w3schools.com"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="https://www.w3schools.com users.xsd">
-    <user>
-        <userID>1</userID>
-        <username>walid_omari</username>
-        <firstName>Walid</firstName>
-        <lastName>Omari</lastName>
-        <email>Omari.walid@gmail.com</email>
-        <password>Admin@123</password>
-        <phone>0665656565</phone>
-        <img src="../../../public/uploads/user1.jpg"/>
-    </user>
-    <user>
-        <userID>2</userID>
-        <username>ayoub_dkhissi</username>
-        <firstName>Ayoub</firstName>
-        <lastName>Dkhissi</lastName>
-        <email>dkhissi.ayoub@gmail.com</email>
-        <password>Admin@123555</password>
-        <phone>0698989898</phone>
-        <img src="../../../public/uploads/user2.jpg"/>
-    </user>
+<users xmlns="https://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.w3schools.com users.xsd">
+  <user rank="admin">
+    <userID>1</userID>
+    <username>walid_omari</username>
+    <firstName>Walid</firstName>
+    <lastName>Omari</lastName>
+    <email>Omari.walid@gmail.com</email>
+    <password>Admin@123</password>
+    <phone>0665656565</phone>
+    <img src="public/uploads/user1.jpg"/>
+  </user>
+  <user rank="manager">
+    <userID>2</userID>
+    <username>ayoub_dkhissi</username>
+    <firstName>Ayoub</firstName>
+    <lastName>Dkhissi</lastName>
+    <email>dkhissi.ayoub@gmail.com</email>
+    <password>Admin@123555</password>
+    <phone>0698989898</phone>
+    <img src="public/uploads/user2.jpg"/>
+  </user>
+  <user rank="customer">
+    <userID>3</userID>
+    <username>ali_bouhcain</username>
+    <firstName>Ali</firstName>
+    <lastName>Bouhcain</lastName>
+    <email>ali.bouhcain@gmail.com</email>
+    <password>Ali@123</password>
+    <phone>0611223344</phone>
+    <img src="public/uploads/user3.jpg"/>
+  </user>
 </users>

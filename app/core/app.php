@@ -47,8 +47,7 @@ class App
 
 
     /**
-     *  All urls are under form : website.com/str1/str2/str3...../
-     *  the function returns {arr[0] = str0, arr[1] = str2 .....}
+     *  function returns {arr[0] = str0, arr[1] = str2 .....} from url website.com/str1/str2/str3...../
      * @param void
      * @return array
      */
