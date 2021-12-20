@@ -37,7 +37,7 @@ class user
             $this->insertUser("customer", $data['username'], $data['firstName'],$data['lastName'],
                             $data['email'], $data['password'], $data['phone']);
 
-            header("Location: " . ROOT . "login");
+            header("Location: login");
             die;
         }
 
@@ -45,38 +45,64 @@ class user
 
     }
 
-    // Validate data for signUp
-    public function dataValidation($data)
-    {
-        $result = true;
-        if(!preg_match("/^[a-zA-Z]+$/", $data['firstName'])) {
-            $this->error .= "Please enter a valid first name <br>";
-            $result = false;
-        }
-        if(!preg_match("/^[a-zA-Z]+$/", $data['lastName'])) {
-            $this->error .= "Please enter a valid last name <br>";
-            $result = false;
-        }
-        if(!preg_match("/^[0-9]{10}$/", $data['phone'])) {
-            $this->error .= "Please enter a valid phone number <br>";
-            $result = false;
-        }
-        if(!preg_match("/^[0-9a-zA-Z_.?]+@[a-zA-Z_.?].+[a-z]+$/", $data['email']))
-        {
-            $this->error .= "Please enter a valid email <br>";
-            $result = false;
-        }
-        if(strlen($data['password']) < 4) {
-            $this->error .= "Password must be atleast 4 characters long <br>";
-            $result = false;
-        }
-
-        return $result;
-    }
-
     public function login($POST)
     {
+        $data = array();
 
+        $data['email'] = $POST["email"];
+        $data['password'] = $POST["password"];
+
+        $this->dataValidation($data);
+
+        if($this->error == "")
+        {
+            // check if email exists
+            $user = $this->getUserByEmail($data['email']);
+            if($user != false && (string)$user->password == $data['password'])
+            {
+
+                $_SESSION['userID'] = (string)$user->userID;
+                header("Location: home");
+            }
+            else
+                $this->error .= "Wrong email or password <br>";
+        }
+
+        $_SESSION['error'] = $this->error;
+    }
+
+    /**
+     *
+     */
+    public function logout()
+    {
+        if(isset($_SESSION['userID']))
+        {
+            unset($_SESSION['userID']);
+            header("Location: home");
+            die;
+        }
+    }
+
+
+    /**
+     *
+     *
+     * @return false|mixed|SimpleXMLElement returns SimpleXMLElement user object if the user is connected, else returns false
+     */
+    public function checkLogin()
+    {
+        if(isset($_SESSION['userID']))
+        {
+            $arr['id'] = $_SESSION['userID'];
+
+            $user = $this->getUserById($arr['id']);
+            if($user != false)
+            {
+                return $user;
+            }
+        }
+        return false;
     }
 
 
@@ -104,6 +130,15 @@ class user
         return $user;
     }
 
+    public function getUserById($id)
+    {
+        $xml = simplexml_load_file('../app/xml/users/users.xml');
+        $xml->registerXPathNamespace('c', "https://www.w3schools.com");
+        $user = $xml->xpath("//c:users//c:user[c:userID = '{$id}']");
+        $user = array_shift($user);
+        return $user;
+    }
+
     /**
      * Add user to xml document users.xml
      *
@@ -127,7 +162,7 @@ class user
         $user->addChild('password', $password);
         $user->addChild('phone', $phone);
         $image = $user->addChild('img');
-        $image->addAttribute('src', 'null');
+        $image->addAttribute('src', 'public/uploads/userDefault.png');
         file_put_contents('../app/xml/users/users.xml', $xml->asXML());
 
         // To insert in tree format not one line. Nicely formats output with indentation and extra space
@@ -153,7 +188,34 @@ class user
         return $maxID;
     }
 
+    // Validate data for signUp and Login
+    public function dataValidation($data)
+    {
+        $result = true;
+        if(isset($data['firstName']) && !preg_match("/^[a-zA-Z]+$/", $data['firstName'])) {
+            $this->error .= "Please enter a valid first name <br>";
+            $result = false;
+        }
+        if(isset($data['lastName']) && !preg_match("/^[a-zA-Z]+$/", $data['lastName'])) {
+            $this->error .= "Please enter a valid last name <br>";
+            $result = false;
+        }
+        if(isset($data['phone']) && !preg_match("/^[0-9]{10}$/", $data['phone'])) {
+            $this->error .= "Please enter a valid phone number <br>";
+            $result = false;
+        }
+        if(isset($data['email']) && !preg_match("/^[0-9a-zA-Z_.?]+@[a-zA-Z_.?].+[a-z]+$/", $data['email']))
+        {
+            $this->error .= "Please enter a valid email <br>";
+            $result = false;
+        }
+        if(isset($data['password']) && strlen($data['password']) < 4) {
+            $this->error .= "Password must be atleast 4 characters long <br>";
+            $result = false;
+        }
 
+        return $result;
+    }
 
 
 }

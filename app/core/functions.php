@@ -10,3 +10,11 @@ function check_error()
         unset($_SESSION['error']);
     }
 }
+
+
+function show($data)
+{
+    echo "<pre>";
+    print_r($data);
+    echo "</pre>";
+}
