@@ -2,15 +2,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title><?= $data['page_title'] ?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link type="text/css" rel="stylesheet" href="assets/css/style.css?<?php echo time(); ?>">
+    <script>
+        function setBodyPadding() {
+            let body, header;
+            body = document.body;
+            header = document.getElementById("header");
+            body.style.paddingTop = "" + header.offsetHeight + "px";
+        }
+        window.onload = setBodyPadding;
+    </script>
 </head>
 
 <body>
-    <header class="bg-light p-3 border-bottom sticky-top">
+    <header class="bg-light p-3 border-bottom" id="header">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+                <div>
+                    <a class="text-decoration-none link-danger fs-4 me-3" href="#">EcommerceXML</a>
+                </div>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                     <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
