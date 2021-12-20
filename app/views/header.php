@@ -27,7 +27,7 @@
                 </div>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+                    <li><a href="home" class="nav-link px-2 link-secondary">Home</a></li>
                     <li><a href="#" class="nav-link px-2 link-dark">Products</a></li>
                     <li><a href="#" class="nav-link px-2 link-dark">Catalogs</a></li>
                     <li><a href="#" class="nav-link px-2 link-dark">Contact</a></li>
@@ -38,31 +38,38 @@
                 </form>
 
                 <ul class="nav col-12 col-lg-2 me-lg-2 mb-2 justify-content-center mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link px-2 link-primary" href="#">Login</a>
-                    </li>
+                    <?php if(!isset($data['user'])): ?>
+                        <li class="nav-item">
+                                <a class="nav-link px-2 link-primary" href="login">Login</a>
+                        </li>
 
-                    <li>
-                        <a class="nav-link px-2 link-secondary" href="#">Register</a>
-                    </li>
+                        <li>
+                                <a class="nav-link px-2 link-secondary" href="signup">Register</a>
+                        </li>
+                    <?php endif;?>
                 </ul>
 
-                <a class="link-dark text-decoration-none mx-2" href=""><i class="fas fa-shopping-cart"></i></a>
-                <div class="dropdown text-end">
+                <?php if(isset($data['user']) && (string)$data['user']->Attributes() == 'admin'): ?>
+                    <a class="nav-link px-2 link-primary text-success" href="admin">Admin Section</a>
+                <?php endif;?>
+
+
+                <?php if(isset($data['user'])): ?>
+                    <a class="link-dark text-decoration-none mx-2" href=""><i class="fas fa-shopping-cart"></i></a>
+                    <div class="dropdown text-end">
                     <a href="#" class="d-flex flex-row justify-content-end align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="true">
-                        <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle m-1">
-                        <div class="m-1">walid</div>
+                        <img src="<?= $data['user']->img->Attributes(); ?>" alt="mdo" width="32" height="32" class="rounded-circle m-1">
+                        <div class="m-1"> <?= $data['user']->username ?></div>
                     </a>
+
                     <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
                         <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Settings</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a></li>
+                        <li><a class="dropdown-item" href="logout">Logout</a></li>
                     </ul>
+                <?php endif;?>
 
-                    <form id="logout-form" action="#" method="POST" class="d-none">
-
-                    </form>
                 </div>
 
             </div>
