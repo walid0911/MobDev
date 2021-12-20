@@ -5,7 +5,9 @@
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <a href="signup"><button type="button" class="btn btn-primary btn-md px-3 gap-3">Sign up</button></a>
+                <?php if(!isset($data['user'])):?>
+                    <a href="signup"><button type="button" class="btn btn-primary btn-md px-3 gap-3">Sign up</button></a>
+                <?php endif;?>
                 <a><button type="button" class="btn btn-outline-light btn-md px-3">Show all products</button></a>
             </div>
         </div>

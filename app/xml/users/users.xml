@@ -40,4 +40,14 @@
     <phone>0669966365</phone>
     <img src="public/uploads/userDefault.png"/>
   </user>
+  <user rank="customer">
+    <userID>5</userID>
+    <username>karim_ahmadii</username>
+    <firstName>gaga</firstName>
+    <lastName>gaga</lastName>
+    <email>karim.ahmaddi@gmail.com</email>
+    <password>111111</password>
+    <phone>0687325487</phone>
+    <img src="public/uploads/userDefault.png"/>
+  </user>
 </users>
