@@ -18,12 +18,12 @@
 </head>
 
 <body>
-    <header class="bg-light p-3 border-bottom" id="header">
+    <header class="bg-light py-3 px-2 border-bottom" id="header">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
                 <div>
-                    <a class="text-decoration-none link-danger fs-4 me-3" href="#">EcommerceXML</a>
+                    <a class="text-decoration-none link-danger fs-5 me-3" href="#">EcommerceXML</a>
                 </div>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -37,7 +37,7 @@
                     <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
                 </form>
 
-                <ul class="nav col-12 col-lg-2 me-lg-2 mb-2 justify-content-center mb-md-0">
+                <ul class="nav col-12 col-lg-2 mb-2 justify-content-center mb-md-0">
                     <?php if(!isset($data['user'])): ?>
                         <li class="nav-item">
                                 <a class="nav-link px-2 link-primary" href="login">Login</a>
@@ -47,11 +47,11 @@
                                 <a class="nav-link px-2 link-secondary" href="signup">Register</a>
                         </li>
                     <?php endif;?>
-                </ul>
 
-                <?php if(isset($data['user']) && (string)$data['user']->Attributes() == 'admin'): ?>
-                    <a class="nav-link px-2 link-primary text-success" href="admin">Admin Section</a>
-                <?php endif;?>
+                    <?php if(isset($data['user']) && (string)$data['user']->Attributes() == 'admin'): ?>
+                        <a class="nav-link link-primary text-success" href="admin">Admin Section</a>
+                    <?php endif;?>
+                </ul>
 
 
                 <?php if(isset($data['user'])): ?>
