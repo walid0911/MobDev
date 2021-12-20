@@ -149,8 +149,6 @@ class user
     {
         $xml = simplexml_load_file('../app/xml/users/users.xml');
 
-
-
         $maxID = $this->getMaxID();
         $user = $xml->addChild('user');
         $user->addAttribute('rank', $rank);

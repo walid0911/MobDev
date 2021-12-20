@@ -35,6 +35,9 @@
                     <?php endif;?>
                 </ul>
 
+                <?php if(isset($data['user']) && (string)$data['user']->Attributes() == 'admin'): ?>
+                    <a class="nav-link px-2 link-primary text-success" href="admin">Admin Section</a>
+                <?php endif;?>
 
 
                 <?php if(isset($data['user'])): ?>

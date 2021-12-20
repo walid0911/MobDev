@@ -13,6 +13,8 @@ class Home extends Controller
             $data['user'] = $user;
         }
 
+
         $this->view("home", $data);
+
     }
 }
