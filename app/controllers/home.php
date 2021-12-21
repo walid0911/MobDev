@@ -14,6 +14,16 @@ class Home extends Controller
         }
 
 
+        // Get some products (phones & laptops) to show in home page
+        $productModel = $this->load_model("product");
+        $phones = $productModel->get_n_ProductsByCategory("phone", 7);
+        $laptops = $productModel->get_n_ProductsByCategory("laptop", 7);
+
+
+        if(count($phones) > 0)
+            $data['phones'] = $phones;
+        if(count($laptops) > 0)
+            $data['laptops'] = $laptops;
         $this->view("home", $data);
 
     }

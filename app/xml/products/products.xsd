@@ -23,8 +23,8 @@
             <xs:element name="mark" type="xs:string"/>
             <xs:element name="model" type="xs:string"/>
             <xs:element name="cpu" type="xs:string"/>
-            <xs:element name="ram" type="xs:unsignedInt"/>
-            <xs:element name="storage" type="xs:unsignedInt"/>
+            <xs:element name="ram" type="xs:string"/>
+            <xs:element name="storage" type="xs:string"/>
             <xs:element name="gpu" type="xs:string"/>
             <xs:element name="size" type="unsignedDouble"/>
             <xs:element name="camera" type="xs:string"/>
