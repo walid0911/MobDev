@@ -17,7 +17,7 @@
     </script>
 </head>
 
-<body class="min-vh-100 position-relative">
+<body class="min-vh-100 position-relative d-flex flex-column justify-content-between">
     <header class="bg-light py-3 px-2 border-bottom" id="header">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
