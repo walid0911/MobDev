@@ -8,7 +8,7 @@
     <email>omari.walid@gmail.com</email>
     <password>Admin@123</password>
     <phone>0665656565</phone>
-    <img src="public/uploads/user1.jpg"/>
+    <img src="user1.jpg"/>
   </user>
   <user rank="manager">
     <userID>2</userID>
@@ -18,7 +18,7 @@
     <email>dkhissi.ayoub@gmail.com</email>
     <password>Admin@123555</password>
     <phone>0698989898</phone>
-    <img src="public/uploads/user2.jpg"/>
+    <img src="user2.jpg"/>
   </user>
   <user rank="customer">
     <userID>3</userID>
@@ -28,7 +28,7 @@
     <email>ali.bouhcain@gmail.com</email>
     <password>Ali@123</password>
     <phone>0611223344</phone>
-    <img src="public/uploads/user3.jpg"/>
+    <img src="user3.jpg"/>
   </user>
   <user rank="customer">
     <userID>4</userID>
@@ -38,7 +38,7 @@
     <email>karim.ahmadi@gmail.com</email>
     <password>Admin123</password>
     <phone>0669966365</phone>
-    <img src="public/uploads/userDefault.png"/>
+    <img src="userDefault.png"/>
   </user>
   <user rank="customer">
     <userID>5</userID>
@@ -48,6 +48,6 @@
     <email>walid.omari.0911@gmail.com</email>
     <password>12345678</password>
     <phone>0614541952</phone>
-    <img src="public/uploads/userDefault.png"/>
+    <img src="userDefault.png"/>
   </user>
 </users>

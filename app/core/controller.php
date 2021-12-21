@@ -17,6 +17,7 @@ abstract class Controller
         {
             include "../app/views/" . $path . ".php";
         }else{
+            $_SESSION["error"] = "Call for a View that does not exist!!";
             include "../app/views/" . "404.php";
         }
     }

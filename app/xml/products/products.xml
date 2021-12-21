@@ -16,7 +16,7 @@
         <size>14.5</size>
         <camera>BisonCam,NB Pro</camera>
         <price>11000</price>
-        <img src="public/uploads/product1.jpg"/>
+        <img src="product1.jpg"/>
     </product>
 
     <product>
@@ -31,7 +31,7 @@
         <size>14.5</size>
         <camera>108 megapixel</camera>
         <price>10000</price>
-        <img src="public/uploads/product2.jpg"/>
+        <img src="product2.jpg"/>
     </product>
 
     <product>
@@ -46,7 +46,7 @@
         <size>7.7</size>
         <camera>12MP wide-angle </camera>
         <price>7000</price>
-        <img src="public/uploads/product3.png"/>
+        <img src="product3.png"/>
     </product>
 
     <product>
@@ -61,7 +61,7 @@
         <size>14.5</size>
         <camera>Nahimic3 3D WebCam </camera>
         <price>12000</price>
-        <img src="public/uploads/product4.jpg"/>
+        <img src="product4.jpg"/>
     </product>
 
     <product>
@@ -76,7 +76,7 @@
         <size>19.9</size>
         <camera>WebCam ProHD</camera>
         <price>15000</price>
-        <img src="public/uploads/product5.jpg"/>
+        <img src="product5.jpg"/>
     </product>
 
     <product>
@@ -91,7 +91,7 @@
         <size>17.3</size>
         <camera>HP Wide Vision 720p HD camera</camera>
         <price>20000</price>
-        <img src="public/uploads/product6.png"/>
+        <img src="product6.png"/>
     </product>
 
     <product>
@@ -106,7 +106,7 @@
         <size>14.3</size>
         <camera>HP Wide Vision 720p HD camera</camera>
         <price>13000</price>
-        <img src="public/uploads/product7.png"/>
+        <img src="product7.png"/>
     </product>
 
     <product>
@@ -121,7 +121,7 @@
         <size>6.1</size>
         <camera>12 MP, 4K f/1.8, 26mm X3 </camera>
         <price>7000</price>
-        <img src="public/uploads/product8.jpg"/>
+        <img src="product8.jpg"/>
     </product>
 
 </products>

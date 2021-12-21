@@ -14,7 +14,7 @@ class Home extends Controller
         }
 
 
-        // Get some products (phones & laptops) to show in home page
+        // Get some random products (phones & laptops) to show in home page
         $productModel = $this->load_model("product");
         $phones = $productModel->get_n_ProductsByCategory("phone", 7);
         $laptops = $productModel->get_n_ProductsByCategory("laptop", 7);

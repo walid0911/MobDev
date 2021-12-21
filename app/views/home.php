@@ -7,7 +7,7 @@
             <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <?php if(!isset($data['user'])):?>
-                    <a href="signup"><button type="button" class="btn btn-primary btn-md px-3 gap-3">Sign up</button></a>
+                    <a href="<?= ROOT ?>signup"><button type="button" class="btn btn-primary btn-md px-3 gap-3">Sign up</button></a>
                 <?php endif;?>
                 <a><button type="button" class="btn btn-outline-light btn-md px-3">Show all products</button></a>
             </div>
@@ -37,7 +37,7 @@
                     <?php foreach ($data['laptops'] as $laptop): ?>
                         <div class="col">
                             <div class="card ">
-                                <img src="<?= $laptop->img->attributes();?>" alt="laptop1" class="card_img">
+                                <img src="<?= UPLOADS . $laptop->img->attributes();?>" alt="laptop1" class="card_img">
                                 <div class="card-body">
                                     <h5 class="card-title"><?= $laptop->mark . " " . $laptop->model;?></h5>
                                     <div class="card-text small">
@@ -64,7 +64,7 @@
                         <?php foreach ($data['phones'] as $phone): ?>
                             <div class="col">
                                 <div class="card ">
-                                    <img src="<?= $phone->img->attributes() ?>" alt="phone1" class="card_img">
+                                    <img src="<?= UPLOADS . $phone->img->attributes() ?>" alt="phone1" class="card_img">
                                     <div class="card-body">
                                         <h5 class="card-title"> <?= $phone->mark . " " . $phone->model; ?></h5>
                                         <div class="card-text small">

@@ -21,7 +21,12 @@ class App
         if(file_exists("../app/controllers/" . strtolower($url[0]) . ".php"))
         {
             $this->controller = strtolower($url[0]);
-            unset($url[0]);
+            //unset($url[0]);
+        }
+        else // if such controller doesn't exist: redirect to home
+        {
+            header("Location: " . ROOT);
+            die;
         }
         require_once "../app/controllers/" . $this->controller . ".php";
         $this->controller = new $this->controller;
@@ -34,16 +39,16 @@ class App
             if(method_exists($this->controller, $url[1]) && is_callable([$this->controller, $url[1]]))
             {
                 $this->method = $url[1];
-                unset($url[1]);
+                //unset($url[1]);
+            }
+            else // if such methode doesn't exist use the index methode
+            {
+                header("Location: " . ROOT . $url[0]);
             }
         }
 
-        //show($url[1]);
-        // get Params
-        $this->params = (count($url) > 0) ? $url : ["home"];
-
-
-
+        // get the rest from url --> Parameters
+        $this->params = (count($url) > 2) ? array_slice($url, 2) : array();
 
         // run the controller's methode given the parameters
         call_user_func_array([$this->controller,$this->method], $this->params);
