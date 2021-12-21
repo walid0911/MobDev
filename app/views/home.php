@@ -1,6 +1,6 @@
 <?php $this->view("header", $data); ?>
 
-<div class="container-fluid" id="hero-section">
+<div class="container-fluid position-relative" id="hero-section">
     <div class="px-4 py-5 text-center text-light">
         <h1 class="display-5 fw-bold">Centered hero</h1>
         <div class="col-lg-6 mx-auto">
@@ -15,7 +15,7 @@
     </div>
 </div>
 
-<div class="container my-5">
+<div class="container position-relative mt-5">
     <nav>
         <div class="nav nav-tabs mb-3 justify-content-center" id="nav-tab" role="tablist">
             <button class="nav-link active mx-2" id="nav-laptops-tab" data-bs-toggle="tab" data-bs-target="#nav-laptops" type="button" role="tab" aria-controls="nav-laptops" aria-selected="true">Laptops</button>
@@ -260,10 +260,5 @@
     </div>
 </div>
 
-
-
-<?php
-
-?>
 
 <?php $this->view("footer", $data);?>
