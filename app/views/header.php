@@ -17,7 +17,7 @@
     </script>
 </head>
 
-<body>
+<body class="min-vh-100 position-relative">
     <header class="bg-light py-3 px-2 border-bottom" id="header">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -36,26 +36,22 @@
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
                     <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
                 </form>
-
+                <?php if(!isset($data['user'])): ?>
                 <ul class="nav col-12 col-lg-2 mb-2 justify-content-center mb-md-0">
-                    <?php if(!isset($data['user'])): ?>
-                        <li class="nav-item">
-                                <a class="nav-link px-2 link-primary" href="login">Login</a>
-                        </li>
-
-                        <li>
-                                <a class="nav-link px-2 link-secondary" href="signup">Register</a>
-                        </li>
-                    <?php endif;?>
-
-                    <?php if(isset($data['user']) && (string)$data['user']->Attributes() == 'admin'): ?>
-                        <a class="nav-link link-primary text-success" href="admin">Admin Section</a>
-                    <?php endif;?>
+                    <li class="nav-item">
+                        <a class="nav-link px-2 link-primary" href="login">Login</a>
+                    </li>
+                    <li>
+                        <a class="nav-link px-2 link-secondary" href="signup">Register</a>
+                    </li>
                 </ul>
-
+                <?php endif;?>
+                <?php if(isset($data['user']) && (string)$data['user']->Attributes() == 'admin'): ?>
+                    <a class="nav-link link-primary text-success" href="admin">Admin Section</a>
+                <?php endif;?>
 
                 <?php if(isset($data['user'])): ?>
-                    <a class="link-dark text-decoration-none mx-2" href=""><i class="fas fa-shopping-cart"></i></a>
+                    <a class="link-dark text-decoration-none mx-2 position-relative" href=""><i class="fas fa-shopping-cart"></i><span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger pb-1" style="font-size: 8px;">0</span></a>
                     <div class="dropdown text-end">
                     <a href="#" class="d-flex flex-row justify-content-end align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="true">
                         <img src="<?= $data['user']->img->Attributes(); ?>" alt="mdo" width="32" height="32" class="rounded-circle m-1">

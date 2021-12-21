@@ -1,4 +1,4 @@
-<footer class="footer-59391">
+<footer class="position-relative bottom-0 w-100">
 
     <div class="container-fluid bg-light px-4 pt-3 border-top d-flex flex-column">
         <div class="row mb-2 d-flex text-center">
@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-6">
                 <ul class="nav-links list-unstyled d-flex flex-lg-row justify-content-center">
-                    <li><a class="text-decoration-none link-secondary me-4" href="#">Home</a></li>
+                    <li><a class="text-decoration-none link-secondary me-4" href="home">Home</a></li>
                     <li><a class="text-decoration-none link-secondary me-4" href="#">Products</a></li>
                     <li><a class="text-decoration-none link-secondary me-4" href="#">Catalogs</a></li>
                     <li><a class="text-decoration-none link-secondary me-4" href="#">Contact</a></li>
@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col d-flex justify-content-center">
                 <div class="copyright">
-                    <p><small>Copyright 2019. All Rights Reserved.</small></p>
+                    <p><small>Copyright 2021. All Rights Reserved. A&W</small></p>
                 </div>
             </div>
         </div>

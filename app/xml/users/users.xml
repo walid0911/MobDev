@@ -40,4 +40,14 @@
     <phone>0669966365</phone>
     <img src="public/uploads/userDefault.png"/>
   </user>
+  <user rank="customer">
+    <userID>5</userID>
+    <username>walid123</username>
+    <firstName>walid</firstName>
+    <lastName>omari</lastName>
+    <email>walid.omari.0911@gmail.com</email>
+    <password>12345678</password>
+    <phone>0614541952</phone>
+    <img src="public/uploads/userDefault.png"/>
+  </user>
 </users>
