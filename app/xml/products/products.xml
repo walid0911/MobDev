@@ -21,7 +21,7 @@
 
     <product>
         <productID>2</productID>
-        <type>laptop</type>
+        <type>phone</type>
         <mark>SAMSUNG</mark>
         <model>GALAXY S25U</model>
         <cpu>Cortex A55</cpu>
@@ -32,6 +32,21 @@
         <camera>108 megapixel</camera>
         <price>10000</price>
         <img src="public/uploads/product2.jpg"/>
+    </product>
+
+    <product>
+        <productID>3</productID>
+        <type>phone</type>
+        <mark>Apple</mark>
+        <model>iphone X</model>
+        <cpu>Apple A11 bionic</cpu>
+        <ram>3</ram>
+        <storage>256</storage>
+        <gpu> Apple GPU (three-core graphics) </gpu>
+        <size>7.7</size>
+        <camera>12MP wide-angle </camera>
+        <price>7000</price>
+        <img src="public/uploads/product3.jpg"/>
     </product>
 
 </products>
