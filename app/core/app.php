@@ -38,8 +38,12 @@ class App
             }
         }
 
+        //show($url[1]);
         // get Params
         $this->params = (count($url) > 0) ? $url : ["home"];
+
+
+
 
         // run the controller's methode given the parameters
         call_user_func_array([$this->controller,$this->method], $this->params);

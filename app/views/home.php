@@ -52,7 +52,7 @@
                             </div>
                         </div>
                     <?php endforeach;?>
-                    <a href="" class="col link-primary text-decoration-none align-self-center text-center">See all products</a>
+                    <a href="#" class="col link-primary text-decoration-none align-self-center text-center">See all products</a>
                 </div>
             </div>
             <?php endif; ?>
@@ -79,7 +79,7 @@
                                 </div>
                             </div>
                         <?php endforeach;?>
-                        <a href="" class="col link-primary text-decoration-none align-self-center text-center">See all products</a>
+                        <a href="#" class="col link-primary text-decoration-none align-self-center text-center">See all products</a>
                     </div>
                 </div>
             <?php endif; ?>
