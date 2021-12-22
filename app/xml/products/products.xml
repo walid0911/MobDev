@@ -9,14 +9,14 @@
         <type>laptop</type>
         <mark>HP</mark>
         <model>Pavillon</model>
-        <cpu>i7-10075H</cpu>
-        <ram>16</ram>
-        <storage>512</storage>
-        <gpu>Nvidia RTX-2060</gpu>
+        <cpu>Intel Core i7-10075H (10th gen)</cpu>
+        <ram>16 GB DDR4 RAM</ram>
+        <storage>512 GB SSD</storage>
+        <gpu>Intel UHD</gpu>
         <size>14.5</size>
         <camera>BisonCam,NB Pro</camera>
         <price>11000</price>
-        <img src="public/uploads/product1.jpg"/>
+        <img src="product1.jpg"/>
     </product>
 
     <product>
@@ -25,13 +25,13 @@
         <mark>SAMSUNG</mark>
         <model>GALAXY S25U</model>
         <cpu>Cortex A55</cpu>
-        <ram>8</ram>
-        <storage>255</storage>
+        <ram>1 GB RAM</ram>
+        <storage>256 GB</storage>
         <gpu>Mali-G77 MP11</gpu>
         <size>14.5</size>
         <camera>108 megapixel</camera>
         <price>10000</price>
-        <img src="public/uploads/product2.jpg"/>
+        <img src="product2.jpg"/>
     </product>
 
     <product>
@@ -40,13 +40,88 @@
         <mark>Apple</mark>
         <model>iphone X</model>
         <cpu>Apple A11 bionic</cpu>
-        <ram>3</ram>
-        <storage>256</storage>
+        <ram>3 GB RAM</ram>
+        <storage>256 GB</storage>
         <gpu> Apple GPU (three-core graphics) </gpu>
         <size>7.7</size>
         <camera>12MP wide-angle </camera>
         <price>7000</price>
-        <img src="public/uploads/product3.jpg"/>
+        <img src="product3.png"/>
+    </product>
+
+    <product>
+        <productID>4</productID>
+        <type>laptop</type>
+        <mark>GigaByte</mark>
+        <model> AORUS 5kb laptop</model>
+        <cpu>i7-10750H 10th Gen 6 Core™</cpu>
+        <ram>16 GB RAM</ram>
+        <storage>512 GB SSD</storage>
+        <gpu> NVIDIA RTX2060 </gpu>
+        <size>14.5</size>
+        <camera>Nahimic3 3D WebCam </camera>
+        <price>12000</price>
+        <img src="product4.jpg"/>
+    </product>
+
+    <product>
+        <productID>5</productID>
+        <type>laptop</type>
+        <mark>Asus</mark>
+        <model> ASUS TUF Dash F15</model>
+        <cpu>11th Gen Intel® Core™ i7-11375H</cpu>
+        <ram>32GB of DDR4-3200 RAM</ram>
+        <storage>1 TB SSD</storage>
+        <gpu> GeForce RTX™ 3070 GPU  </gpu>
+        <size>19.9</size>
+        <camera>WebCam ProHD</camera>
+        <price>15000</price>
+        <img src="product5.jpg"/>
+    </product>
+
+    <product>
+        <productID>6</productID>
+        <type>laptop</type>
+        <mark>HP</mark>
+        <model>OMEN 17 LAPTOP</model>
+        <cpu>11th Gen Intel® Core™ i7-11800H</cpu>
+        <ram>32 GB DDR4-3200 RAM</ram>
+        <storage>512 GB SSD</storage>
+        <gpu>NVIDIA® GeForce RTX™ 3070 Mobile</gpu>
+        <size>17.3</size>
+        <camera>HP Wide Vision 720p HD camera</camera>
+        <price>20000</price>
+        <img src="product6.png"/>
+    </product>
+
+    <product>
+        <productID>7</productID>
+        <type>laptop</type>
+        <mark>HP</mark>
+        <model>Spectre x360 Convertible</model>
+        <cpu>11th Gen Intel® Core™ i7-1165G7</cpu>
+        <ram>16 GB DDR RAM</ram>
+        <storage>512 GB Intel® SSD</storage>
+        <gpu>Intel® Iris® Xe Graphics</gpu>
+        <size>14.3</size>
+        <camera>HP Wide Vision 720p HD camera</camera>
+        <price>13000</price>
+        <img src="product7.png"/>
+    </product>
+
+    <product>
+        <productID>8</productID>
+        <type>phone</type>
+        <mark>Apple</mark>
+        <model>iPhone 11</model>
+        <cpu>Hexa-core(2x2.65 GHz Lightning)</cpu>
+        <ram>4 GB RAM</ram>
+        <storage>256 GB</storage>
+        <gpu> Apple GPU (4-core graphics) </gpu>
+        <size>6.1</size>
+        <camera>12 MP, 4K f/1.8, 26mm X3 </camera>
+        <price>7000</price>
+        <img src="product8.jpg"/>
     </product>
 
 </products>
