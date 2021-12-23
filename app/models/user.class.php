@@ -181,8 +181,8 @@ class user
     {
         $xml = simplexml_load_file('../app/xml/users/users.xml');
         $xml->registerXPathNamespace('c', 'https://www.w3schools.com');
-        $maxID = $xml->xpath("//c:users/c:user/c:userID");
-        $maxID = $maxID[$xml->count()-1];
+        $allIDs = $xml->xpath("//c:users/c:user/c:userID");
+        $maxID = $allIDs[$xml->count()-1];
         return $maxID;
     }
 

@@ -7,9 +7,9 @@
             <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <?php if(!isset($data['user'])):?>
-                    <a href="<?= ROOT ?>signup"><button type="button" class="btn btn-primary btn-md px-3 gap-3">Sign up</button></a>
+                    <a href="<?= ROOT . "signup"?> "><button type="button" class="btn btn-primary btn-md px-3 gap-3">Sign up</button></a>
                 <?php endif;?>
-                <a><button type="button" class="btn btn-outline-light btn-md px-3">Show all products</button></a>
+                <a href="<?= ROOT . "products" ?>"><button type="button" class="btn btn-outline-light btn-md px-3">Show all products</button></a>
             </div>
         </div>
     </div>
@@ -47,12 +47,12 @@
                                             <strong>RAM :</strong> <?= $laptop->ram; ?> <br>
                                         </p>
                                     </div>
-                                    <a href="#" class="text-decoration-none link-info">Click for more info ...</a>
+                                    <a href="<?= ROOT. "products/product/" . $laptop->productID; ?>" class="text-decoration-none link-info">Click for more info ...</a>
                                 </div>
                             </div>
                         </div>
                     <?php endforeach;?>
-                    <a href="#" class="col link-primary text-decoration-none align-self-center text-center">See all products</a>
+                    <a href="<?=ROOT . "products"?>" class="col link-primary text-decoration-none align-self-center text-center">See all products</a>
                 </div>
             </div>
             <?php endif; ?>
@@ -74,12 +74,12 @@
                                                 <strong>RAM :</strong> <?= $phone->ram; ?> <br>
                                             </p>
                                         </div>
-                                        <a href="#" class="text-decoration-none link-info">Click for more info ...</a>
+                                        <a href="<?=ROOT . "products/product/" . $phone->productID;?>" class="text-decoration-none link-info">Click for more info ...</a>
                                     </div>
                                 </div>
                             </div>
                         <?php endforeach;?>
-                        <a href="#" class="col link-primary text-decoration-none align-self-center text-center">See all products</a>
+                        <a href="<?=ROOT . "products"?>" class="col link-primary text-decoration-none align-self-center text-center">See all products</a>
                     </div>
                 </div>
             <?php endif; ?>

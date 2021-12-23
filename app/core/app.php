@@ -50,8 +50,8 @@ class App
         // get the rest from url --> Parameters
         $this->params = (count($url) > 2) ? array_slice($url, 2) : array();
 
-        // run the controller's methode given the parameters
-        call_user_func_array([$this->controller,$this->method], $this->params);
+        // run the required controller with the required methode given the array parameters
+        call_user_func_array([$this->controller,$this->method], array($this->params));
     }
 
 
