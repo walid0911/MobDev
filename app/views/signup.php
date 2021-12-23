@@ -31,7 +31,7 @@
             <label for="floatingPassword">Password</label>
         </div>
 
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
     </form>
 </div>
 <?php $this->view("footer",$data); ?>

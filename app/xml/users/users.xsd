@@ -26,6 +26,7 @@
             <xs:element name="email" type="emailType"/>
             <xs:element name="password" type="xs:string"/>
             <xs:element name="phone" type="phoneNumberType"/>
+            <xs:element name="createdAt" type="xs:dateTime"/>
             <xs:element name="img" type="imgType"/>
         </xs:sequence>
         <xs:attribute name="rank" type="rankType" use="required" default="costumer"/>
@@ -42,7 +43,7 @@
     <!--Restriction on first name and last name: should not contain any numerical character-->
     <xs:simpleType name="FLNameType">
         <xs:restriction base="xs:string">
-            <xs:pattern value="[a-zA-Z]+"/>
+            <xs:pattern value="[a-zA-Z\s]+"/>
         </xs:restriction>
     </xs:simpleType>
 
