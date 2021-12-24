@@ -29,6 +29,7 @@
             <xs:element name="size" type="unsignedDouble"/>
             <xs:element name="camera" type="xs:string"/>
             <xs:element name="price" type="unsignedDouble"/>
+            <xs:element name="description" type="xs:string"/>
             <xs:element name="img" type="imgType"/>
         </xs:sequence>
     </xs:complexType>

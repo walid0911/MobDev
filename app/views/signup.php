@@ -127,8 +127,9 @@
             <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" required>
             <label for="floatingPassword">Password</label>
         </div>
-
         <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
     </form>-->
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    </form>
 </div>
 <?php $this->view("footer",$data); ?>

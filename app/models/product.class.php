@@ -14,6 +14,20 @@ class product
         return $xml;
     }
 
+
+    /**
+     *  returns SimpleXmlElements representing the product of the given id
+     * @return array SimpleXmlElement or false
+     */
+    public function getProductById($id)
+    {
+        $xml = simplexml_load_file('../app/xml/products/products.xml');
+        $xml->registerXPathNamespace('c', "https://www.w3schools.com");
+        $product = $xml->xpath("//c:products/c:product[c:productID ='{$id}']");
+        $product = array_shift($product);
+        return $product;
+    }
+
     /**
      *  returns array of SimpleXmlElements containing all the products of the specified category
      * @return array array of SimpleXmlElements

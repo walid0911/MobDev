@@ -29,7 +29,7 @@
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                     <li><a href="<?= ROOT ?>home" class="nav-link px-2 link-secondary">Home</a></li>
-                    <li><a href="#" class="nav-link px-2 link-dark">Products</a></li>
+                    <li><a href="<?= ROOT . "products"?>" class="nav-link px-2 link-dark">Products</a></li>
                     <li><a href="#" class="nav-link px-2 link-dark">Catalogs</a></li>
                     <li><a href="#" class="nav-link px-2 link-dark">Contact</a></li>
                 </ul>
@@ -60,7 +60,7 @@
                         </a>
 
                         <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="<?= ROOT . "profile"?>">Profile</a></li>
                             <li><a class="dropdown-item" href="#">Settings</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="<?= ROOT ?>logout">Logout</a></li>

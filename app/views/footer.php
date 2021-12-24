@@ -13,8 +13,8 @@
             </div>
             <div class="col-md-6">
                 <ul class="nav-links list-unstyled d-flex flex-lg-row justify-content-center">
-                    <li><a class="text-decoration-none link-secondary me-4" href="home">Home</a></li>
-                    <li><a class="text-decoration-none link-secondary me-4" href="#">Products</a></li>
+                    <li><a class="text-decoration-none link-secondary me-4" href="<?= ROOT ?>">Home</a></li>
+                    <li><a class="text-decoration-none link-secondary me-4" href="<?= ROOT . "products"?>">Products</a></li>
                     <li><a class="text-decoration-none link-secondary me-4" href="#">Catalogs</a></li>
                     <li><a class="text-decoration-none link-secondary me-4" href="#">Contact</a></li>
                 </ul>

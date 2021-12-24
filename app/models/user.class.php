@@ -35,7 +35,7 @@ class user
         if($this->error == "")
         {
             $this->insertUser("customer", $data['username'], $data['firstName'],$data['lastName'],
-                            $data['email'], $data['password'], $data['phone']);
+                            $data['email'], hash("sha1",$data['password']), $data['phone']);
 
             header("Location: login");
             die;
@@ -50,7 +50,7 @@ class user
         $data = array();
 
         $data['email'] = $POST["email"];
-        $data['password'] = $POST["password"];
+        $data['password'] = hash("sha1",$POST["password"]);
 
         $this->dataValidation($data);
 
@@ -159,8 +159,9 @@ class user
         $user->addChild('email', $email);
         $user->addChild('password', $password);
         $user->addChild('phone', $phone);
+        $user->addChild("createdAt",date("Y-m-d") . "T" . date("h:i:s"));
         $image = $user->addChild('img');
-        $image->addAttribute('src', 'public/uploads/userDefault.png');
+        $image->addAttribute('src', 'userDefault.png');
         file_put_contents('../app/xml/users/users.xml', $xml->asXML());
 
         // To insert in tree format not one line. Nicely formats output with indentation and extra space
@@ -181,8 +182,8 @@ class user
     {
         $xml = simplexml_load_file('../app/xml/users/users.xml');
         $xml->registerXPathNamespace('c', 'https://www.w3schools.com');
-        $maxID = $xml->xpath("//c:users/c:user/c:userID");
-        $maxID = $maxID[$xml->count()-1];
+        $allIDs = $xml->xpath("//c:users/c:user/c:userID");
+        $maxID = $allIDs[$xml->count()-1];
         return $maxID;
     }
 
@@ -194,7 +195,7 @@ class user
             $this->error .= "Please enter a valid first name <br>";
             $result = false;
         }
-        if(isset($data['lastName']) && !preg_match("/^[a-zA-Z]+$/", $data['lastName'])) {
+        if(isset($data['lastName']) && !preg_match("/^[a-zA-Z\s]+$/", $data['lastName'])) {
             $this->error .= "Please enter a valid last name <br>";
             $result = false;
         }

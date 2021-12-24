@@ -56,7 +56,19 @@ header
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
-
 .form-signin .invalid-feedback {
     margin-bottom: 10px;
+}
+/*AYOUB's custom css!*/
+.inf-content{
+    border:1px solid #DDDDDD;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.noBtnTransition:focus{
+    outline: none;
+    box-shadow: none;
 }
