@@ -198,7 +198,7 @@ class user
             $this->error .= "Please enter a valid last name <br>";
             $result = false;
         }
-        if(isset($data['phone']) && !preg_match("/^[0-9]{10}$/", $data['phone'])) {
+        if(isset($data['phone']) && !preg_match("/^[0-9]{9}$/", $data['phone'])) {
             $this->error .= "Please enter a valid phone number <br>";
             $result = false;
         }

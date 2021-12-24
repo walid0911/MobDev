@@ -63,7 +63,7 @@
     <!--Restriction on phone number: must respect the phone number pattern-->
     <xs:simpleType name="phoneNumberType">
         <xs:restriction base="xs:string">
-            <xs:pattern value="[0-9]{10}" />
+            <xs:pattern value="[0-9]{9}" />
         </xs:restriction>
     </xs:simpleType>
 

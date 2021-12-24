@@ -7,7 +7,7 @@
     <lastName>Omari</lastName>
     <email>omari.walid@gmail.com</email>
     <password>Admin@123</password>
-    <phone>0665656565</phone>
+    <phone>665656565</phone>
     <img src="user1.jpg"/>
   </user>
   <user rank="manager">
@@ -17,7 +17,7 @@
     <lastName>Dkhissi</lastName>
     <email>dkhissi.ayoub@gmail.com</email>
     <password>Admin@123555</password>
-    <phone>0698989898</phone>
+    <phone>698989898</phone>
     <img src="user2.jpg"/>
   </user>
   <user rank="customer">
@@ -27,7 +27,7 @@
     <lastName>Bouhcain</lastName>
     <email>ali.bouhcain@gmail.com</email>
     <password>Ali@123</password>
-    <phone>0611223344</phone>
+    <phone>611223344</phone>
     <img src="user3.jpg"/>
   </user>
   <user rank="customer">
@@ -37,7 +37,7 @@
     <lastName>ahmadi</lastName>
     <email>karim.ahmadi@gmail.com</email>
     <password>Admin123</password>
-    <phone>0669966365</phone>
+    <phone>669966365</phone>
     <img src="userDefault.png"/>
   </user>
   <user rank="customer">
@@ -47,7 +47,7 @@
     <lastName>omari</lastName>
     <email>walid.omari.0911@gmail.com</email>
     <password>12345678</password>
-    <phone>0614541952</phone>
+    <phone>614541952</phone>
     <img src="userDefault.png"/>
   </user>
 </users>

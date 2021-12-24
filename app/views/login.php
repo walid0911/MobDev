@@ -1,7 +1,5 @@
 <?php $this->view("header",$data); ?>
 
-<span style="font-size:18px;color:red;"><?php check_error() ?></span>
-
 <div class="form-signin my-3">
     <form method="post">
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
