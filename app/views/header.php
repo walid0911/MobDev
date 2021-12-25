@@ -3,7 +3,7 @@
 <head>
     <title><?= $data['page_title'] ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="<?= ASSETS ?>css/bootstrap.min.css">
+<!--    <link type="text/css" rel="stylesheet" href="--><?//= ASSETS ?><!--bootstrap/dist/css/bootstrap.min.css?--><?//= time(); ?><!--">-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link type="text/css" rel="stylesheet" href="<?= ASSETS ?>css/style.css?<?= time(); ?>">
 

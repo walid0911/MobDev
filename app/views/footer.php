@@ -30,7 +30,7 @@
     </div>
 </footer>
 
-<script type="text/javascript" src="<?=ASSETS?>/js/bootstrap.bundle.js"></script>
+<script type="text/javascript" src="<?=ASSETS?>bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

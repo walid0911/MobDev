@@ -1,0 +1,76 @@
+header
+{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1002;
+}
+
+#hero-section
+{
+  background-image: linear-gradient(to bottom, rgba(33, 33, 33, 0.9), rgba(33, 33, 33, 0.6)), url("../images/bg_hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@media (min-width: 992px) {
+  #hero-section
+  {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.card_img
+{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signin .invalid-feedback {
+  margin-bottom: 10px;
+}
+/*AYOUB's custom css!/*/
+.inf-content{
+  border:1px solid #DDDDDD;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.noBtnTransition:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+@import "../bootstrap/scss/bootstrap";

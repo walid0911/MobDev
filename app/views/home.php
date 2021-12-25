@@ -36,9 +36,9 @@
 
                     <?php foreach ($data['laptops'] as $laptop): ?>
                         <div class="col">
-                            <div class="card ">
-                                <img src="<?= UPLOADS . $laptop->img->attributes();?>" alt="laptop1" class="card_img">
-                                <div class="card-body">
+                            <div class="card h-100">
+                                <img src="<?= UPLOADS . $laptop->img->attributes();?>" alt="<?= $laptop->mark . " " . $laptop->model; ?>" class="card_img">
+                                <div class="card-body d-flex flex-column justify-content-between">
                                     <h5 class="card-title"><?= $laptop->mark . " " . $laptop->model;?></h5>
                                     <div class="card-text small">
                                         <p>
@@ -64,8 +64,8 @@
                         <?php foreach ($data['phones'] as $phone): ?>
                             <div class="col">
                                 <div class="card ">
-                                    <img src="<?= UPLOADS . $phone->img->attributes() ?>" alt="phone1" class="card_img">
-                                    <div class="card-body">
+                                    <img src="<?= UPLOADS . $phone->img->attributes() ?>" alt="<?= $phone->mark . " " . $phone->model; ?>" class="card_img">
+                                    <div class="card-body d-flex flex-column justify-content-between">
                                         <h5 class="card-title"> <?= $phone->mark . " " . $phone->model; ?></h5>
                                         <div class="card-text small">
                                             <p>
