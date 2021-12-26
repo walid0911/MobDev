@@ -1,5 +1,9 @@
 <?php $this->view("header", $data); ?>
 
+<div class="container">
+    <img src="<?=UPLOADS . $data["product"]->img->Attributes()?>" width="300">
+</div>
+
 <img src="<?=UPLOADS . $data["product"]->img->Attributes()?>" width="300">
 
     <strong>Product Type :</strong> <?= $data["product"]->type; ?> <br>
