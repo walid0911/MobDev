@@ -1,4 +1,4 @@
-<?php $this->view("header", $data); ?>
+<?php $this->view("header", $data);?>
 
 <div class="container-fluid position-relative" id="hero-section">
     <div class="px-4 py-5 text-center text-light">
