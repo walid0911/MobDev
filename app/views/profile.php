@@ -87,7 +87,7 @@
                                 </strong>
                             </td>
                             <td class="text-primary">
-                                <?= $user->phone;?>
+                                <?= "+212" . $user->phone;?>
                             </td>
                         </tr>
                         <tr>
@@ -108,11 +108,11 @@
                     </table>
 
                     <a href="#"><button type="button" class="btn btn-outline-danger float-lg-end noBtnTransition">Edit Profile</button></a>
+                    <a href="<?= ROOT?>profile/customerCard"><button type="button" class="btn btn-outline-success noBtnTransition">Generate Customer Card</button></a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 <?php $this->view("footer", $data); ?>
