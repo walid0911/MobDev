@@ -203,7 +203,8 @@ class user
             $this->error .= "Please enter a valid phone number <br>";
             $result = false;
         }
-        if(isset($data['email']) && !preg_match("/^[0-9a-zA-Z_.?]+@[a-zA-Z_.?].+[a-z]+$/", $data['email']))
+        $regEmail = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';
+        if(isset($data['email']) && !preg_match($regEmail, $data['email']))
         {
             $this->error .= "Please enter a valid email <br>";
             $result = false;

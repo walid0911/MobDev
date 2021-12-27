@@ -1,69 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <users xmlns="https://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.w3schools.com users.xsd">
-    <user rank="admin">
-        <userID>1</userID>
-        <username>walid_omari</username>
-        <firstName>Walid</firstName>
-        <lastName>Omari</lastName>
-        <email>omari.walid@gmail.com</email>
-        <password>a29c57c6894dee6e8251510d58c07078ee3f49bf</password>
-        <phone>665656565</phone>
-        <createdAt>2021-12-20T20:12:00</createdAt>
-        <img src="user1.jpg"/>
-    </user>
-    <user rank="manager">
-        <userID>2</userID>
-        <username>ayoub_dkhissi</username>
-        <firstName>Ayoub</firstName>
-        <lastName>Dkhissi</lastName>
-        <email>dkhissi.ayoub@gmail.com</email>
-        <password>a29c57c6894dee6e8251510d58c07078ee3f49bf</password>
-        <phone>698989898</phone>
-        <createdAt>2021-12-20T20:17:00</createdAt>
-        <img src="user2.jpg"/>
-    </user>
-    <user rank="customer">
-        <userID>3</userID>
-        <username>ali_bouhcain</username>
-        <firstName>Ali</firstName>
-        <lastName>Bouhcain</lastName>
-        <email>ali.bouhcain@gmail.com</email>
-        <password>a5be5724ddbac3ff2948d9abccf79e4f5a5e5db3</password>
-        <phone>611223344</phone>
-        <createdAt>2021-12-21T20:12:00</createdAt>
-        <img src="user3.jpg"/>
-    </user>
-    <user rank="customer">
-        <userID>4</userID>
-        <username>karim_ahmadi</username>
-        <firstName>karim</firstName>
-        <lastName>ahmadi</lastName>
-        <email>karim.ahmadi@gmail.com</email>
-        <password>7af2d10b73ab7cd8f603937f7697cb5fe432c7ff</password>
-        <phone>669966365</phone>
-        <createdAt>2021-12-23T20:11:00</createdAt>
-        <img src="userDefault.png"/>
-    </user>
-    <user rank="customer">
-        <userID>5</userID>
-        <username>walid123</username>
-        <firstName>walid</firstName>
-        <lastName>omari</lastName>
-        <email>walid.omari.0911@gmail.com</email>
-        <password>7c222fb2927d828af22f592134e8932480637c0d</password>
-        <phone>614541952</phone>
-        <createdAt>2021-12-23T17:12:00</createdAt>
-        <img src="userDefault.png"/>
-    </user>
-    <user rank="customer">
-        <userID>6</userID>
-        <username>Karim1955</username>
-        <firstName>karim</firstName>
-        <lastName>el mardi</lastName>
-        <email>Karim1955@gmail.com</email>
-        <password>75744bcd278af8ff0b6abccb5925003489ac5935</password>
-        <phone>699999999</phone>
-        <createdAt>2021-12-24T12:20:47</createdAt>
-        <img src="userDefault.png"/>
-    </user>
+  <user rank="admin">
+    <userID>1</userID>
+    <username>walid_omari</username>
+    <firstName>Walid</firstName>
+    <lastName>Omari</lastName>
+    <email>omari.walid@gmail.com</email>
+    <password>a29c57c6894dee6e8251510d58c07078ee3f49bf</password>
+    <phone>665656565</phone>
+    <createdAt>2021-12-20T20:12:00</createdAt>
+    <img src="user1.jpg"/>
+  </user>
+  <user rank="manager">
+    <userID>2</userID>
+    <username>ayoub_dkhissi</username>
+    <firstName>Ayoub</firstName>
+    <lastName>Dkhissi</lastName>
+    <email>dkhissi.ayoub@gmail.com</email>
+    <password>a29c57c6894dee6e8251510d58c07078ee3f49bf</password>
+    <phone>698989898</phone>
+    <createdAt>2021-12-20T20:17:00</createdAt>
+    <img src="user2.jpg"/>
+  </user>
+  <user rank="customer">
+    <userID>3</userID>
+    <username>ali_bouhcain</username>
+    <firstName>Ali</firstName>
+    <lastName>Bouhcain</lastName>
+    <email>ali.bouhcain@gmail.com</email>
+    <password>a5be5724ddbac3ff2948d9abccf79e4f5a5e5db3</password>
+    <phone>611223344</phone>
+    <createdAt>2021-12-21T20:12:00</createdAt>
+    <img src="user3.jpg"/>
+  </user>
+  <user rank="customer">
+    <userID>4</userID>
+    <username>karim_ahmadi</username>
+    <firstName>karim</firstName>
+    <lastName>ahmadi</lastName>
+    <email>karim.ahmadi@gmail.com</email>
+    <password>7af2d10b73ab7cd8f603937f7697cb5fe432c7ff</password>
+    <phone>669966365</phone>
+    <createdAt>2021-12-23T20:11:00</createdAt>
+    <img src="userDefault.png"/>
+  </user>
+  <user rank="customer">
+    <userID>5</userID>
+    <username>walid123</username>
+    <firstName>walid</firstName>
+    <lastName>omari</lastName>
+    <email>walid.omari.0911@gmail.com</email>
+    <password>7c222fb2927d828af22f592134e8932480637c0d</password>
+    <phone>614541952</phone>
+    <createdAt>2021-12-23T17:12:00</createdAt>
+    <img src="userDefault.png"/>
+  </user>
+  <user rank="customer">
+    <userID>6</userID>
+    <username>Karim1955</username>
+    <firstName>karim</firstName>
+    <lastName>el mardi</lastName>
+    <email>Karim1955@gmail.com</email>
+    <password>75744bcd278af8ff0b6abccb5925003489ac5935</password>
+    <phone>699999999</phone>
+    <createdAt>2021-12-24T12:20:47</createdAt>
+    <img src="userDefault.png"/>
+  </user>
+  <user rank="customer">
+    <userID>7</userID>
+    <username>ayoub_dkhissiaa</username>
+    <firstName>aaa</firstName>
+    <lastName>aaa</lastName>
+    <email>dkhissi@yahoo.com</email>
+    <password>7c4a8d09ca3762af61e59520943dc26494f8941b</password>
+    <phone>688996655</phone>
+    <createdAt>2021-12-27T02:15:21</createdAt>
+    <img src="userDefault.png"/>
+  </user>
 </users>

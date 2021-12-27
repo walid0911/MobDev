@@ -54,24 +54,11 @@ class Profile extends Controller
             $xml->addChild("createdAt", $user->createdAt);
             $image = $xml->addChild('img');
             $image->addAttribute('src', $user->img->Attributes());
-            $xmlFile = '../app/controllers/pdfGEN/src/main/resources/user.xml';
+            $xmlFile = ROOT_LOC . 'app/pdfGEN/src/main/resources/user.xml';
             file_put_contents($xmlFile, $xml->asXML());
 
 
-
-            // Building & running the java program
-            $output = shell_exec("cd " . __DIR__ . "/pdfGEN 2>&1 && .\gradlew build 2>&1 && .\gradlew run 2>&1");
-            $pdfFile = $_SERVER['DOCUMENT_ROOT'] . '/' . WEBSITE_TITLE . "/public/uploads/customerCard.pdf";
-
-            $file_contents = file_get_contents($pdfFile);
-            header('Content-Type: application/octet-stream');
-            header("Content-Transfer-Encoding: Binary");
-            header("Content-disposition: attachment; filename=\"customerCard.pdf\"");
-            echo $file_contents;
-
-            // Delete generated files from the server
-            unlink($xmlFile);
-            unlink($pdfFile);
+            generatePDF('user.xml', 'user.xsl', 'customerCard.pdf');
 
             // redirect to profile:
             header("Location: profile");

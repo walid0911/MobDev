@@ -18,7 +18,6 @@ class Home extends Controller
         $phones = $productModel->get_n_ProductsByCategory("phone", 7);
         $laptops = $productModel->get_n_ProductsByCategory("laptop", 7);
 
-
         if(count($phones) > 0)
             $data['phones'] = $phones;
         if(count($laptops) > 0)
