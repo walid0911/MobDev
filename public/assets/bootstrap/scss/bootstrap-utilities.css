@@ -11,31 +11,31 @@
 }
 
 .link-primary {
-  color: #1b1c80;
+  color: #0b2027;
 }
 .link-primary:hover, .link-primary:focus {
-  color: #161666;
+  color: #091a1f;
 }
 
 .link-secondary {
-  color: #7375f0;
+  color: #6D72C3;
 }
 .link-secondary:hover, .link-secondary:focus {
-  color: #8f91f3;
+  color: #8a8ecf;
 }
 
 .link-success {
-  color: #198754;
+  color: #70A9A1;
 }
 .link-success:hover, .link-success:focus {
-  color: #146c43;
+  color: #8dbab4;
 }
 
 .link-info {
-  color: #0dcaf0;
+  color: #40798C;
 }
 .link-info:hover, .link-info:focus {
-  color: #3dd5f3;
+  color: #336170;
 }
 
 .link-warning {
@@ -53,10 +53,10 @@
 }
 
 .link-light {
-  color: #f8f9fa;
+  color: #F2F4F3;
 }
 .link-light:hover, .link-light:focus {
-  color: #f9fafb;
+  color: #f5f6f5;
 }
 
 .link-dark {
@@ -414,19 +414,19 @@
 }
 
 .border-primary {
-  border-color: #1b1c80 !important;
+  border-color: #0b2027 !important;
 }
 
 .border-secondary {
-  border-color: #7375f0 !important;
+  border-color: #6D72C3 !important;
 }
 
 .border-success {
-  border-color: #198754 !important;
+  border-color: #70A9A1 !important;
 }
 
 .border-info {
-  border-color: #0dcaf0 !important;
+  border-color: #40798C !important;
 }
 
 .border-warning {
@@ -438,7 +438,7 @@
 }
 
 .border-light {
-  border-color: #f8f9fa !important;
+  border-color: #F2F4F3 !important;
 }
 
 .border-dark {
@@ -1243,19 +1243,19 @@
 
 /* rtl:end:remove */
 .text-primary {
-  color: #1b1c80 !important;
+  color: #0b2027 !important;
 }
 
 .text-secondary {
-  color: #7375f0 !important;
+  color: #6D72C3 !important;
 }
 
 .text-success {
-  color: #198754 !important;
+  color: #70A9A1 !important;
 }
 
 .text-info {
-  color: #0dcaf0 !important;
+  color: #40798C !important;
 }
 
 .text-warning {
@@ -1267,7 +1267,7 @@
 }
 
 .text-light {
-  color: #f8f9fa !important;
+  color: #F2F4F3 !important;
 }
 
 .text-dark {
@@ -1299,19 +1299,19 @@
 }
 
 .bg-primary {
-  background-color: #1b1c80 !important;
+  background-color: #0b2027 !important;
 }
 
 .bg-secondary {
-  background-color: #7375f0 !important;
+  background-color: #6D72C3 !important;
 }
 
 .bg-success {
-  background-color: #198754 !important;
+  background-color: #70A9A1 !important;
 }
 
 .bg-info {
-  background-color: #0dcaf0 !important;
+  background-color: #40798C !important;
 }
 
 .bg-warning {
@@ -1323,7 +1323,7 @@
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #F2F4F3 !important;
 }
 
 .bg-dark {

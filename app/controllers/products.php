@@ -18,6 +18,8 @@ class Products extends Controller
         // Loading the products model, and get all the products
         $productModel = $this->load_model("product");
         $products = $productModel->getAllProducts();
+        $marks = $productModel->getAllMarks();
+        $data['marks'] = $marks;
         $data['products'] = $products;
         $this->view("allProducts", $data);
     }

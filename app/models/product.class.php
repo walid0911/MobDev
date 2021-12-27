@@ -14,6 +14,18 @@ class product
         return $xml;
     }
 
+    /**
+     *  returns SimpleXmlElements representing the distinct marks available
+     *  @return array SimpleXmlElement or false
+     */
+    public function getAllMarks()
+    {
+        $xml = simplexml_load_file('../app/xml/products/products.xml');
+        $xml->registerXPathNamespace('c', "https://www.w3schools.com");
+        $mark = $xml->xpath("//c:products/c:product[not(c:mark = preceding:: c:mark)]/c:mark");
+        return $mark;
+    }
+
 
     /**
      *  returns SimpleXmlElements representing the product of the given id
