@@ -81,4 +81,8 @@ class product
         
         return $Random_n_Products;
     }
+
+    public function getProductsByFilter($filterBy) {
+
+    }
 }

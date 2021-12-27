@@ -2,13 +2,14 @@
 
 <div class="container-fluid d-flex flex-row justify-content-between p-0">
     <nav class="container col-3 p-4 bg-light">
-        <form action="#" class="d-flex flex-column">
-            <div>
+        <form method="post" action="#" class="d-flex flex-column">
+            <div class="d-flex flex-column justify-content-between">
                 <label class="form-label" for="priceRange">Price</label>
-                <div class="d-flex flex-row justify-content-between gap-2" id="priceRange">
-                    <input type="number" class="form-control px-1 py-0 text-center" placeholder="From 1000" aria-label="minPrice">
-                    <input type="number" class="form-control px-1 py-0 text-center" placeholder="To 50000" aria-label="maxPrice">
+                <div class="d-flex flex-row justify-content-between gap-2 mb-2" id="priceRange">
+                    <input type="number" class="form-control px-1 py-0 text-center" placeholder="From 1000" aria-label="minPrice" name="minPrice" value="<?= isset($_POST['minPrice']) ? $_POST['minPrice'] : '';?>">
+                    <input type="number" class="form-control px-1 py-0 text-center" placeholder="To 50000" aria-label="maxPrice" name="maxPrice" value="<?= isset($_POST['maxPrice']) ? $_POST['maxPrice'] : '';?>">
                 </div>
+                <button class="btn btn-primary py-0 w-50" name="action" type="submit" value="setPrice">Set price</button>
             </div>
 
             <hr>
@@ -23,19 +24,19 @@
                     <div id="collapseOne" class="accordion-collapse collapse show bg-light" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                                <input class="form-check-input" type="checkbox" value="all" id="flexCheckDefault" name="type[]" checked>
                                 <label class="form-check-label" for="flexCheckDefault">
                                     All types
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckPhone">
+                                <input class="form-check-input" type="checkbox" value="phones" id="flexCheckPhone" name="type[]">
                                 <label class="form-check-label" for="flexCheckPhone">
                                     Phones
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckLaptop">
+                                <input class="form-check-input" type="checkbox" value="laptops" id="flexCheckLaptop" name="type[]">
                                 <label class="form-check-label" for="flexCheckLaptop">
                                     Laptops
                                 </label>
@@ -77,7 +78,7 @@
 
             <hr>
 
-            <button class="btn btn-primary" type="submit">Filter</button>
+            <button class="btn btn-primary" name="action" type="submit" value="filter">Filter</button>
         </form>
     </nav>
 

@@ -51,6 +51,25 @@ class Products extends Controller
         }
     }
 
+    //The filter method...
+    public function filter($filterBy)
+    {
+        // Check login and get user information if he is logged in
+        $userModel = $this->load_model("user");
+        $user = $userModel->checkLogin();
+        if ($user != null) {
+            $data['user'] = $user;
+        }
+
+        // Loading the products model, and get the products by filter
+        $productModel = $this->load_model("product");
+        $products = $productModel->getProductsByFilter($filterBy);
+        $marks = $productModel->getAllMarks();
+        $data['marks'] = $marks;
+        $data['products'] = $products;
+        $this->view("allProducts", $data);
+    }
+
 
     // The search methode...
 }
