@@ -82,7 +82,8 @@ class product
         return $Random_n_Products;
     }
 
-    public function getProductsByFilter($filterBy) {
-
+    public function getProductsByFilter($POST, $filterBy) {
+        $xml = simplexml_load_file('../app/xml/products/products.xml');
+        $xml->registerXPathNamespace('c', "https://www.w3schools.com");
     }
 }

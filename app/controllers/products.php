@@ -52,7 +52,7 @@ class Products extends Controller
     }
 
     //The filter method...
-    public function filter($filterBy)
+    public function filter($_POST, $filterBy)
     {
         // Check login and get user information if he is logged in
         $userModel = $this->load_model("user");
@@ -63,7 +63,7 @@ class Products extends Controller
 
         // Loading the products model, and get the products by filter
         $productModel = $this->load_model("product");
-        $products = $productModel->getProductsByFilter($filterBy);
+        $products = $productModel->getProductsByFilter($_POST, $filterBy);
         $marks = $productModel->getAllMarks();
         $data['marks'] = $marks;
         $data['products'] = $products;
