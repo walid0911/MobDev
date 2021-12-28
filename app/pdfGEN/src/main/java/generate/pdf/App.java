@@ -17,11 +17,11 @@ public class App {
     public static void main(String[] args) {
 
 
-        File xmlFile = new File("src/main/resources/user.xml");
-        File xslFile = new File("src/main/resources/user.xsl");
-        File pdfDir = new File("../../../public/uploads");
+        File xmlFile = new File("src/main/resources/" + args[0]);
+        File xslFile = new File("src/main/resources/" + args[1]);
+        File pdfDir = new File("../../public/uploads");
         pdfDir.mkdirs();
-        File pdfFile = new File(pdfDir, "customerCard.pdf");
+        File pdfFile = new File(pdfDir, args[2]);
 
 
         OutputStream out;

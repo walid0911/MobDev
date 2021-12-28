@@ -1,5 +1,7 @@
 <?php $this->view("header",$data); ?>
 
+<span class="alert-danger align-content-center" style="text-align: center;"><?php check_error() ?></span>
+
 <div class="form-signin my-3">
     <form method="post">
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
@@ -9,7 +11,7 @@
             <label for="floatingInput">Email address</label>
         </div>
         <div class="form-floating">
-            <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+            <input type="password" name="password" minlength="4" class="form-control" id="floatingPassword" placeholder="Password" required>
             <label for="floatingPassword">Password</label>
         </div>
 

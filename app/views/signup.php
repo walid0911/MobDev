@@ -1,6 +1,6 @@
 <?php $this->view("header",$data); ?>
 
-<!--<span style="font-size:18px;color:red;">--><?php //check_error() ?><!--</span>-->
+<span class="alert-danger align-content-center" style="text-align: center;"><?php check_error() ?></span>
 
 <div class="container">
     <form class="row g-3 needs-validation my-4 mx-2" method="post" novalidate>
@@ -9,15 +9,10 @@
             <input type="text" class="form-control" id="validationCustom01" name="firstName" value="<?= isset($_POST['firstName']) ? $_POST['firstName'] : '';?>" required>
             <div class="valid-feedback">
                 Looks good!
-            </div><!--
+            </div>
             <div class="invalid-feedback">
                 Please provide a first name.
-            </div>-->
-            <?php if (isset($_SESSION['errname'])) :?>
-                <div class="small text-danger">
-                    Please provide a first name.
-                </div>
-            <?php endif; ?>
+            </div>
         </div>
         <div class="col-md-4">
             <label for="validationCustom02" class="form-label">Last name</label>
@@ -50,7 +45,7 @@
             <label for="validationCustom04" class="form-label">Phone</label>
             <div class="input-group has-validation">
                 <span class="input-group-text" id="inputGroupPrepend">+212</span>
-                <input type="tel" class="form-control" id="validationCustom04" aria-describedby="inputGroupPrepend" name="phone" value="<?= isset($_POST['phone']) ? $_POST['phone'] : '';?>" required>
+                <input type="tel" minlength="9" maxlength="9" class="form-control" id="validationCustom04" aria-describedby="inputGroupPrepend" name="phone" value="<?= isset($_POST['phone']) ? $_POST['phone'] : '';?>" required>
                 <div class="invalid-feedback">
                     Please provide a valid phone number.
                 </div>
@@ -58,7 +53,7 @@
         </div>
         <div class="col-md-3">
             <label for="validationCustom05" class="form-label">Password</label>
-            <input type="password" class="form-control" id="validationCustom05" name="password" required>
+            <input type="password" minlength="4" class="form-control" id="validationCustom05" name="password" required>
             <div class="invalid-feedback">
                 Please provide a valid password.
             </div>
