@@ -61,7 +61,7 @@ class Profile extends Controller
             generatePDF('user.xml', 'user.xsl', 'customerCard.pdf');
 
             // redirect to profile:
-//            header("Location: profile");
+            header("Location: profile");
 
         }
         else // if user not connected --> he can't download a customerCard
