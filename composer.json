@@ -1,15 +1,3 @@
 {
-    "name": "vendor/name",
-    "autoload": {
-        "psr-4": {
-            "Vendor\\Name\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "walid0911",
-            "email": "walid.omari.0911@gmail.com"
-        }
-    ],
-    "require": {}
+
 }
