@@ -1,15 +1,15 @@
 <?php $this->view("header", $data); ?>
 
-<div class="container-fluid d-flex flex-row justify-content-between p-0">
-    <nav class="container col-3 p-4 bg-light">
-        <form method="post" action="#" class="d-flex flex-column">
+<div class="container-fluid row row-cols-1 row-cols-md-2 gx-4 justify-content-between p-0">
+    <nav class="col-sm-4 col-md-3 p-4 bg-light">
+        <form method="get" action="<?=ROOT . "products/filter"?>" class="d-flex flex-column">
             <div class="d-flex flex-column justify-content-between">
                 <label class="form-label" for="priceRange">Price</label>
                 <div class="d-flex flex-row justify-content-between gap-2 mb-2" id="priceRange">
-                    <input type="number" class="form-control px-1 py-0 text-center" placeholder="From 1000" aria-label="minPrice" name="minPrice" value="<?= isset($_POST['minPrice']) ? $_POST['minPrice'] : '';?>">
-                    <input type="number" class="form-control px-1 py-0 text-center" placeholder="To 50000" aria-label="maxPrice" name="maxPrice" value="<?= isset($_POST['maxPrice']) ? $_POST['maxPrice'] : '';?>">
+                    <input type="number" class="form-control px-1 py-0 text-center" placeholder="From 1000" aria-label="minPrice" name="minPrice" value="<?= isset($_GET['minPrice']) ? $_GET['minPrice'] : 1000;?>">
+                    <input type="number" class="form-control px-1 py-0 text-center" placeholder="To 500000" aria-label="maxPrice" name="maxPrice" value="<?= isset($_GET['maxPrice']) ? $_GET['maxPrice'] : 500000;?>">
                 </div>
-                <button class="btn btn-primary py-0 w-50" name="action" type="submit" value="setPrice">Set price</button>
+                <button class="btn btn-primary py-0 w-50" type="submit">Set price</button>
             </div>
 
             <hr>
@@ -30,13 +30,13 @@
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="phones" id="flexCheckPhone" name="type[]">
+                                <input class="form-check-input" type="checkbox" value="phone" id="flexCheckPhone" name="type[]">
                                 <label class="form-check-label" for="flexCheckPhone">
                                     Phones
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="laptops" id="flexCheckLaptop" name="type[]">
+                                <input class="form-check-input" type="checkbox" value="laptop" id="flexCheckLaptop" name="type[]">
                                 <label class="form-check-label" for="flexCheckLaptop">
                                     Laptops
                                 </label>
@@ -58,16 +58,16 @@
                     <div id="collapseTwo" class="accordion-collapse collapse show bg-light" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body ">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                                <input class="form-check-input" type="checkbox" value="all" id="flexCheckDefault" name="brand[]" checked>
                                 <label class="form-check-label" for="flexCheckDefault">
                                     All brands
                                 </label>
                             </div>
-                            <?php foreach ($data['marks'] as $mark): ?>
+                            <?php foreach ($data['brands'] as $brand): ?>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <input class="form-check-input" type="checkbox" value="<?= $brand ?>" id="flexCheckDefault" name="brand[]">
                                 <label class="form-check-label" for="flexCheckDefault">
-                                    <?= $mark ?>
+                                    <?= $brand ?>
                                 </label>
                             </div>
                             <?php endforeach; ?>
@@ -78,15 +78,19 @@
 
             <hr>
 
-            <button class="btn btn-primary" name="action" type="submit" value="filter">Filter</button>
+            <button class="btn btn-primary" type="submit">Filter</button>
         </form>
     </nav>
 
-    <div class="container col-9 px-4 py-2">
+    <div class="col-sm-8 col-md-9 px-4 py-2">
         <p class="fs-3 fw-bold px-3">All products</p>
         <div class="row row-cols-1 row-cols-md-3 gy-4">
+            <?php if (count($data['products']) == 0) : ?>
+                <div class="lead">No products available !</div>
+            <?php endif; ?>
+
             <?php foreach ($data['products'] as $product):?>
-                <div class="col">
+                <div class="col" onclick="">
                     <div class="card h-100">
                         <img src="<?= UPLOADS . $product->img->Attributes()?>" alt="phone1" class="card_img">
                         <div class="card-body d-flex flex-column justify-content-between">
