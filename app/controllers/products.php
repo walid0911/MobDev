@@ -18,8 +18,8 @@ class Products extends Controller
         // Loading the products model, and get all the products
         $productModel = $this->load_model("product");
         $products = $productModel->getAllProducts();
-        $marks = $productModel->getAllMarks();
-        $data['marks'] = $marks;
+        $brands = $productModel->getAllBrands();
+        $data['brands'] = $brands;
         $data['products'] = $products;
         $this->view("allProducts", $data);
     }
@@ -45,10 +45,30 @@ class Products extends Controller
         }
         else {
             $data['product'] = $product;
-            $data['page_title'] = $product->mark . $product->model;
+            $data['page_title'] = $product->mark . " " . $product->model;
 
             $this->view("product", $data);
         }
+    }
+
+    //The filter method...
+    public function filter()
+    {
+        $data['page_title'] = "All Products";
+        // Check login and get user information if he is logged in
+        $userModel = $this->load_model("user");
+        $user = $userModel->checkLogin();
+        if ($user != null) {
+            $data['user'] = $user;
+        }
+
+        // Loading the products model, and get the products by filter
+        $productModel = $this->load_model("product");
+        $products = $productModel->getProductsByFilter($_GET);
+        $brands = $productModel->getAllBrands();
+        $data['brands'] = $brands;
+        $data['products'] = $products;
+        $this->view("allProducts", $data);
     }
 
 

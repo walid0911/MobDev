@@ -40,10 +40,10 @@ function show($data)
 function generatePDF($xmlFileName, $xslFileName, $pdfFileName)
 {
     // Building & running the java program
-    show(ROOT_LOC);
-    $output = shell_exec("cd " . ROOT_LOC . 'app/pdfGEN 2>&1 && .\gradlew run --args="'. $xmlFileName. ' ' . $xslFileName . ' ' . $pdfFileName . ' 2>&1');
+    $output = shell_exec("cd " . ROOT_LOC . 'app/pdfGEN 2>&1 && .\gradlew build 2>&1 && .\gradlew run --args="'. $xmlFileName. ' ' . $xslFileName . ' ' . $pdfFileName . ' 2>&1');
 
     $pdfFile = ROOT_LOC . "public/uploads/" . $pdfFileName;
+    show($pdfFile);
     $xmlFile = ROOT_LOC . 'app/pdfGEN/src/main/resources/' . $xmlFileName;
     //Define header information
     header('Content-Description: File Transfer');
