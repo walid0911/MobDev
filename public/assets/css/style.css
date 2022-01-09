@@ -65,6 +65,7 @@ header {
   border-radius: 10px;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
+
 .noBtnTransition:focus {
   outline: none;
   box-shadow: none;
@@ -10835,6 +10836,33 @@ input[type=number] {
 .row {
   margin-left: 0 !important;
   margin-right: 0 !important;
+}
+
+#img_product {
+  width: 30%;
+  height: 50vh;
+}
+#img_product img {
+  object-fit: contain;
+  border-radius: 10px;
+}
+#img_product #shadow {
+  border-radius: 10px;
+}
+#img_product #btn_buy {
+  transition: all 0.3s ease-in;
+}
+#img_product #btn_buy:hover {
+  background: #ffffffba;
+  color: #0b2027;
+  transform: translateY(-5px);
+}
+
+@media screen and (max-width: 576px) {
+  #img_product {
+    width: 100%;
+    height: 30vh;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

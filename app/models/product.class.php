@@ -18,12 +18,12 @@ class product
      *  returns SimpleXmlElements representing the distinct marks available
      *  @return array SimpleXmlElement or false
      */
-    public function getAllMarks()
+    public function getAllBrands()
     {
         $xml = simplexml_load_file('../app/xml/products/products.xml');
         $xml->registerXPathNamespace('c', "https://www.w3schools.com");
-        $mark = $xml->xpath("//c:products/c:product[not(c:mark = preceding:: c:mark)]/c:mark");
-        return $mark;
+        $brand = $xml->xpath("//c:products/c:product[not(c:mark = preceding:: c:mark)]/c:mark");
+        return $brand;
     }
 
 
@@ -80,5 +80,34 @@ class product
         }
         
         return $Random_n_Products;
+    }
+
+    public function getProductsByFilter($GET) {
+        isset($GET['type']) ? $typeCount = count($GET['type']) : $typeCount = 0;
+        isset($GET['brand']) ? $brandCount = count($GET['brand']) : $brandCount = 0;
+        $xPathQuery = "//c:products/c:product[(c:price >= {$GET['minPrice']} and c:price <= {$GET['maxPrice']})";
+
+        $xml = simplexml_load_file('../app/xml/products/products.xml');
+        $xml->registerXPathNamespace('c', "https://www.w3schools.com");
+
+        if ($typeCount != 0 && $GET['type'][0] != "all") {
+            $xPathQuery .= " and (";
+            foreach ($GET['type'] as $type) {
+                $xPathQuery .= " c:type = '{$type}' or";
+            }
+            $xPathQuery .= " c:type = '{$GET['type'][0]}')";
+        }
+
+        if ($brandCount != 0 and $GET['brand'][0] != "all") {
+            $xPathQuery .= " and (";
+            foreach ($GET['brand'] as $brand) {
+                $xPathQuery .= " c:mark = '{$brand}' or";
+            }
+            $xPathQuery .= " c:mark = '{$GET['brand'][0]}')";
+        }
+
+        $xPathQuery .= " ]";
+        $products = $xml->xpath($xPathQuery);
+        return $products;
     }
 }
