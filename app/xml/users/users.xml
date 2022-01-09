@@ -20,7 +20,7 @@
     <password>a29c57c6894dee6e8251510d58c07078ee3f49bf</password>
     <phone>698989898</phone>
     <createdAt>2021-12-20T20:17:00</createdAt>
-    <img src="user2.jpg"/>
+    <img src="user2.JPG"/>
   </user>
   <user rank="customer">
     <userID>3</userID>
@@ -29,7 +29,7 @@
     <lastName>Bouhcain</lastName>
     <email>ali.bouhcain@gmail.com</email>
     <password>a5be5724ddbac3ff2948d9abccf79e4f5a5e5db3</password>
-    <phone>611223344</phone>
+    <phone>611223347</phone>
     <createdAt>2021-12-21T20:12:00</createdAt>
     <img src="user3.jpg"/>
   </user>
@@ -68,13 +68,13 @@
   </user>
   <user rank="customer">
     <userID>7</userID>
-    <username>ayoub_dkhissiaa</username>
-    <firstName>aaa</firstName>
-    <lastName>aaa</lastName>
-    <email>dkhissi@yahoo.com</email>
+    <username>kaka</username>
+    <firstName>ayob</firstName>
+    <lastName>kaka</lastName>
+    <email>akaka@gmail.com</email>
     <password>7c4a8d09ca3762af61e59520943dc26494f8941b</password>
-    <phone>688996655</phone>
-    <createdAt>2021-12-27T02:15:21</createdAt>
+    <phone>699885588</phone>
+    <createdAt>2021-12-29T02:27:31</createdAt>
     <img src="userDefault.png"/>
   </user>
 </users>

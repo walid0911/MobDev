@@ -4,8 +4,6 @@
     <img src="<?=UPLOADS . $data["product"]->img->Attributes()?>" width="300">
 </div>
 
-<img src="<?=UPLOADS . $data["product"]->img->Attributes()?>" width="300">
-
     <strong>Product Type :</strong> <?= $data["product"]->type; ?> <br>
     <strong>Mark & Model :</strong> <?= $data["product"]->mark . " " . $data['product']->model; ?> <br>
     <strong>CPU :</strong> <?= $data["product"]->cpu;  ?> <br>

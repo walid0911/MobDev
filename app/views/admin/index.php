@@ -1,5 +1,13 @@
 <?php $this->view("admin/header", $data); ?>
 
-<?= "<center><h1>THIS IS THE ADMIN PAGE!</h1></center>" ?>
+
+
+
+    <?php
+    echo "<div align='center'>SOME ANNOYING DASHBOARD STATISTICS</div>";
+    ?>
+
+
+
 
 <?php $this->view("admin/footer", $data);?>

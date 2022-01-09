@@ -37,6 +37,8 @@ class user
             $this->insertUser("customer", $data['username'], $data['firstName'],$data['lastName'],
                             $data['email'], hash("sha1",$data['password']), $data['phone']);
 
+            $_SESSION["success"] = "Registration Successful";
+
             header("Location: login");
             die;
         }
@@ -175,6 +177,85 @@ class user
     }
 
     /**
+     * function takes userID and data(new user data) and updates the user information if existed
+     */
+    public function updateUser($id, $data)
+    {
+        $currUser = $this->getUserById($id);
+
+        // show($data);
+        // If there is a change in userData
+        if($currUser != null
+            && ($data['firstName'] != (string)$currUser->firstName
+            || $data['lastName'] != (string)$currUser->lastName
+            || $data['email'] != (string)$currUser->email
+            || $data['username'] != (string)$currUser->username
+            || $data['phone'] != (string)$currUser->phone)
+            || (isset($_FILES['img']) && $_FILES['img']['name'] != "")
+            )
+        {
+
+            if ($this->dataValidation($data))
+            {
+                // If the new email already existed
+                $tmpUser = $this->getUserByEmail($data['email']);
+                if ($tmpUser != null && (string)$tmpUser->email != (string)$currUser->email)
+                {
+                    $this->error .= "That email is already in use! <br>";
+                }
+                // If the new username already existed
+                $tmpUser = $this->getUserByUserName($data['username']);
+                if ($tmpUser != null && (string)$tmpUser->username != (string)$currUser->username) {
+                    $this->error .= "That username is already in use! <br>";
+                }
+
+                if ($this->error == "") {
+                    $xml = simplexml_load_file('../app/xml/users/users.xml');
+                    $xml->registerXPathNamespace('c', 'https://www.w3schools.com');
+                    $user = $xml->xpath("//c:users//c:user[c:userID = '{$id}']");
+                    $user[0]->firstName = $data['firstName'];
+                    $user[0]->lastName = $data['lastName'];
+                    $user[0]->username = $data['username'];
+                    $user[0]->email = $data['email'];
+                    $user[0]->phone = $data['phone'];
+
+
+                    //show(ROOT_LOC . 'public/uploads');
+
+                    // Img
+                    if (isset($_FILES['img']) && $_FILES['img']['name'] != "") {
+                        $file = $_FILES['img']['name'];
+                        $target_dir = ROOT_LOC . "public/uploads/";
+                        $path = pathinfo($file);
+                        $ext = $path['extension'];
+                        $img = 'user' . $currUser->userID;
+                        $temp_name = $_FILES['img']['tmp_name'];
+                        $path_filename_ext = $target_dir . $img . "." . $ext;
+
+                        unlink(ROOT_LOC . "public/uploads/" . $currUser->img->Attributes());
+                        move_uploaded_file($temp_name, $path_filename_ext);
+                        $user[0]->img->attributes()[0] = 'user' . $currUser->userID . '.'.$ext;
+                    }
+
+                    // Save xml changes
+                    $xml->asXml('../app/xml/users/users.xml');
+
+                    $_SESSION['success'] = "Profile Updated!";
+                    header("Location: " . ROOT . "profile");
+                    die;
+                }
+            }
+        }
+        else
+        {
+            $_SESSION["alert"] = "Nothing to change :(";
+        }
+
+        $_SESSION['error'] = $this->error;
+
+    }
+
+    /**
      * function used in id auto-incrementing when adding users
      * we want to get the maxID, so we can add a new user with id = maxID+1
      */
@@ -191,7 +272,7 @@ class user
     public function dataValidation($data)
     {
         $result = true;
-        if(isset($data['firstName']) && !preg_match("/^[a-zA-Z]+$/", $data['firstName'])) {
+        if(isset($data['firstName']) && !preg_match("/^[a-zA-Z\s]+$/", $data['firstName'])) {
             $this->error .= "Please enter a valid first name <br>";
             $result = false;
         }
@@ -213,6 +294,30 @@ class user
             $this->error .= "Password must be atleast 4 characters long <br>";
             $result = false;
         }
+
+        if(isset($data['newPass']) && strlen($data['newPass']) < 4) {
+            $this->error .= "Password must be atleast 4 characters long <br>";
+            $result = false;
+        }
+
+        if(isset($data['img']) && $data['img'] != '') {
+            $file = $_FILES['img']['name'];
+            $path = pathinfo($file);
+            $ext = $path['extension'];
+            $size = $_FILES['img']['size'];
+            if($ext != 'jpg' && $ext != 'jpeg' && $ext != 'png')
+            {
+                $this->error .= "File uploaded must be an image of type .jpg, .jpeg, .png <br>";
+                $result = false;
+
+            }
+            if($size > 10000000)
+            {
+                $this->error .= "Size of the uploaded file must not exceed 10MB <br>";
+                $result = false;
+            }
+        }
+
 
         return $result;
     }

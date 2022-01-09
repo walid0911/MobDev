@@ -2,6 +2,7 @@
 
 <span class="alert-danger align-content-center" style="text-align: center;"><?php check_error() ?></span>
 
+
 <div class="container">
     <form class="row g-3 needs-validation my-4 mx-2" method="post" novalidate>
         <div class="col-md-4">

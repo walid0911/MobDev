@@ -1,6 +1,7 @@
 <?php $this->view("header",$data); ?>
 
 <span class="alert-danger align-content-center" style="text-align: center;"><?php check_error() ?></span>
+<span class="alert-success align-content-center" style="text-align: center;"><?php check_success() ?></span>
 
 <div class="form-signin my-3">
     <form method="post">
