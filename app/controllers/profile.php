@@ -69,4 +69,30 @@ class Profile extends Controller
             header("Location: ". ROOT);
         }
     }
+
+
+    public function edit()
+    {
+        $data = array();
+        $data['page_title'] = "Edit Profile";
+
+        // Check login and get user information if he is logged in
+        $userModel = $this->load_model("user");
+        $user = $userModel->checkLogin();
+        if($user != null) {
+            $data['user'] = $user;
+            if ($_SERVER['REQUEST_METHOD'] == "POST") {
+
+                $userModel->updateUser($user->userID, $_POST);
+            }
+
+            $this->view('editProfile', $data);
+        }
+        else // a user cannot edit his profile if he is not connected
+        {
+            header("Location: ". ROOT);
+        }
+
+
+    }
 }

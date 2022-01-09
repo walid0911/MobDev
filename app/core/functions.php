@@ -10,6 +10,24 @@ function check_error()
     }
 }
 
+function check_success()
+{
+    if(isset($_SESSION['success']) && $_SESSION['success'] != "")
+    {
+        echo $_SESSION['success'];
+        unset($_SESSION['success']);
+    }
+}
+
+function check_alert()
+{
+    if(isset($_SESSION['alert']) && $_SESSION['alert'] != "")
+    {
+        echo $_SESSION['alert'];
+        unset($_SESSION['alert']);
+    }
+}
+
 
 function show($data)
 {
@@ -41,3 +59,5 @@ function generatePDF($xmlFileName, $xslFileName, $pdfFileName)
     unlink($xmlFile);
     unlink($pdfFile);
 }
+
+

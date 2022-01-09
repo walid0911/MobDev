@@ -1,5 +1,9 @@
 <?php $this->view("header", $data); $user = $data['user']?>
 
+<span class="alert-success align-content-center" style="text-align: center;"><?php check_success() ?></span>
+<span class="alert-danger align-content-center" style="text-align: center;"><?php check_error() ?></span>
+<span class="alert-info align-content-center" style="text-align: center;"><?php check_alert() ?></span>
+
 <div class="container bootstrap snippets bootdey mt-5 mb-5 ">
     <div class="panel-body inf-content">
         <div class="row">
@@ -107,7 +111,7 @@
                         </tbody>
                     </table>
 
-                    <a href="#"><button type="button" class="btn btn-outline-danger float-lg-end noBtnTransition">Edit Profile</button></a>
+                    <a href="<?= ROOT . 'profile/edit'?>"><button type="button" class="btn btn-outline-danger float-lg-end noBtnTransition">Edit Profile</button></a>
                     <a href="<?= ROOT?>profile/customerCard"><button type="button" class="btn btn-outline-success noBtnTransition">Generate Customer Card</button></a>
                 </div>
             </div>
