@@ -9,7 +9,7 @@
             </div>
         </div>
 
-        <div><a href="#" class="alert-link" style="color: green"><img src="<?=ASSETS?>images/plusIcon.png" alt="Plus Icon" width="32" class="m-2">Add Product</a></div>
+        <div><a href="<?=ROOT?>admin/addProduct" class="alert-link" style="color: green"><img src="<?=ASSETS?>images/plusIcon.png" alt="Plus Icon" width="32" class="m-2">Add Product</a></div>
         <div class="row">
             <div class="col-md-12">
                 <div class="table-wrap">
@@ -46,8 +46,8 @@
                                     <img src="<?=UPLOADS . $product->img->Attributes(); ?>" alt="mdo" width="50" height="50" class="rounded-circle m-1">
                                 </td>
                                 <td>
-                                    <a class="alert-success" href="#">Edit</a> |
-                                    <a class="alert-danger" href="#">Delete</a>
+                                    <a class="alert-success btn btn-secondary" type="submit" href="<?=ROOT?>admin/editProduct/<?=$product->productID?>">Edit</a>
+                                    <button class="alert-danger btn btn-primary" type="button" data-toggle="modal" data-target="#exampleModal">Delete</button>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -62,3 +62,25 @@
 
 
 <?php $this->view("admin/footer", $data);?>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete the selected product?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary btn-danger">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
