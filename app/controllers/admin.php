@@ -2,6 +2,8 @@
 
 class Admin extends Controller
 {
+
+
     public function index()
     {
         $data['page_title'] = 'Admin';
@@ -83,6 +85,12 @@ class Admin extends Controller
         {
             $_SESSION['error'] = "Some error occurred! You're not logged in";
             $this->view("404", $data);
+        }
+
+
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $user = $this->load_model("product");
+            $user->addProduct($_POST); // contains redirection to Admin/products
         }
 
         $this->view("admin/addProduct", $data);

@@ -110,4 +110,69 @@ class product
         $products = $xml->xpath($xPathQuery);
         return $products;
     }
+
+
+    public function addProduct($post)
+    {
+        $info = $post;
+
+        $file = $_FILES['img']['name'];
+        $target_dir = ROOT_LOC . "public/uploads/";
+        $path = pathinfo($file);
+        $ext = $path['extension'];
+        $img = 'product' . $this->getMaxID()+1;
+        $temp_name = $_FILES['img']['tmp_name'];
+        $path_filename_ext = $target_dir . $img . "." . $ext;
+        move_uploaded_file($temp_name, $path_filename_ext);
+        $info['img'] = $img . '.' . $ext;
+        $this->insertProduct($info);
+
+        $_SESSION['success'] = "Product added!";
+        header("Location: " . ROOT . "admin/products");
+        die;
+    }
+
+    public function insertProduct($info)
+    {
+        $xml = simplexml_load_file('../app/xml/products/products.xml');
+
+        $maxID = $this->getMaxID();
+        $produit = $xml->addChild('product');
+        $produit->addChild('productID', $maxID+1);
+        $produit->addChild('type', $info['type']);
+        $produit->addChild('mark', $info['mark']);
+        $produit->addChild('model', $info['model']);
+        $produit->addChild('cpu', $info['cpu']);
+        $produit->addChild('ram', $info['ram']);
+        $produit->addChild('storage', $info['storage']);
+        $produit->addChild('gpu', $info['gpu']);
+        $produit->addChild('size', $info['size']);
+        $produit->addChild('camera', $info['camera']);
+        $produit->addChild('price', $info['price']);
+        $produit->addChild('description', $info['description']);
+        $image = $produit->addChild('img');
+        $image->addAttribute('src', $info['img']);
+        file_put_contents('../app/xml/products/products.xml', $xml->asXML());
+
+        // To insert in tree format not one line. Nicely formats output with indentation and extra space
+        $xml = '../app/xml/products/products.xml';
+        $dom = new DOMDocument('1.0');
+        $dom->preserveWhiteSpace = false;
+        $dom->formatOutput = true;
+        $dom->load($xml);
+        $dom->save($xml);
+    }
+
+    public function getMaxID()
+    {
+        $xml = simplexml_load_file('../app/xml/products/products.xml');
+        $xml->registerXPathNamespace('c', 'https://www.w3schools.com');
+        $allIDs = $xml->xpath("//c:products/c:product/c:productID");
+        $maxID = $allIDs[$xml->count()-1];
+        return $maxID;
+    }
+
+    public function validateData($data)
+    {
+    }
 }

@@ -1,5 +1,8 @@
 <?php $this->view("admin/header", $data); ?>
 
+<span class="alert-danger align-content-center" style="text-align: center;"><?php check_error() ?></span>
+<span class="alert-success align-content-center" style="text-align: center;"><?php check_success() ?></span>
+<span class="alert-info align-content-center" style="text-align: center;"><?php check_alert() ?></span>
 
 <section class="ftco-section">
     <div class="container">

@@ -1,44 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<products xmlns="https://www.w3schools.com"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="https://www.w3schools.com products.xsd">
-
-
-    <product>
-        <productID>1</productID>
-        <type>laptop</type>
-        <mark>HP</mark>
-        <model>Pavillon</model>
-        <cpu>Intel Core i7-10075H (10th gen)</cpu>
-        <ram>16 GB DDR4 RAM</ram>
-        <storage>512 GB SSD</storage>
-        <gpu>Intel UHD</gpu>
-        <size>14.5</size>
-        <camera>BisonCam,NB Pro</camera>
-        <price>11000</price>
-        <description>
+<products xmlns="https://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.w3schools.com products.xsd">
+  <product>
+    <productID>1</productID>
+    <type>laptop</type>
+    <mark>HP</mark>
+    <model>Pavillon</model>
+    <cpu>Intel Core i7-10075H (10th gen)</cpu>
+    <ram>16 GB DDR4 RAM</ram>
+    <storage>512 GB SSD</storage>
+    <gpu>Intel UHD</gpu>
+    <size>14.5</size>
+    <camera>BisonCam,NB Pro</camera>
+    <price>11000</price>
+    <description>
             The ultra-portable, ultra-playful HP Pavilion 13 Laptop packs enough performance to power through
             your to-do list and still pump up the entertainment. The micro-edge screen and vivid picture quality make
             streaming all day a much cooler experience.
             It may look small and feel light, but the HP Pavilion 13 Laptop packs a serious punch.
             With a high-performance Intel® processor and dual channel memory, work is as good as done.
         </description>
-        <img src="product1.jpg"/>
-    </product>
-
-    <product>
-        <productID>2</productID>
-        <type>phone</type>
-        <mark>SAMSUNG</mark>
-        <model>GALAXY S25U</model>
-        <cpu>Cortex A55</cpu>
-        <ram>1 GB RAM</ram>
-        <storage>256 GB</storage>
-        <gpu>Mali-G77 MP11</gpu>
-        <size>14.5</size>
-        <camera>108 megapixel</camera>
-        <price>10000</price>
-        <description>
+    <img src="product1.jpg"/>
+  </product>
+  <product>
+    <productID>2</productID>
+    <type>phone</type>
+    <mark>SAMSUNG</mark>
+    <model>GALAXY S25U</model>
+    <cpu>Cortex A55</cpu>
+    <ram>1 GB RAM</ram>
+    <storage>256 GB</storage>
+    <gpu>Mali-G77 MP11</gpu>
+    <size>14.5</size>
+    <camera>108 megapixel</camera>
+    <price>10000</price>
+    <description>
             Support smart wake-up, face recognition, fingerprint unlock on the screen,
             with WIFI+BT+FM+GPS, Micro USB interface, 3.5mm standard headphone jack.
             Android 10.0, Support memory card: maximum support expansion 128GB,
@@ -46,105 +41,100 @@
             Rear camera 32 million pixels (color, f/1.8 aperture),
             Battery capacity 4800mAh (removable battery).
         </description>
-        <img src="product2.jpg"/>
-    </product>
-
-    <product>
-        <productID>3</productID>
-        <type>phone</type>
-        <mark>Apple</mark>
-        <model>iphone X</model>
-        <cpu>Apple A11 bionic</cpu>
-        <ram>3 GB RAM</ram>
-        <storage>256 GB</storage>
-        <gpu> Apple GPU (three-core graphics) </gpu>
-        <size>7.7</size>
-        <camera>12MP wide-angle </camera>
-        <price>7000</price>
-        <description>
+    <img src="product2.jpg"/>
+  </product>
+  <product>
+    <productID>3</productID>
+    <type>phone</type>
+    <mark>Apple</mark>
+    <model>iphone X</model>
+    <cpu>Apple A11 bionic</cpu>
+    <ram>3 GB RAM</ram>
+    <storage>256 GB</storage>
+    <gpu> Apple GPU (three-core graphics) </gpu>
+    <size>7.7</size>
+    <camera>12MP wide-angle </camera>
+    <price>7000</price>
+    <description>
             L'iPhone X fait parti de la onzième itération du célèbre smartphone d'Apple.
             Il intègre un SoC Apple A11 Bionic gravé en 10 nm.
             Il dispose d'un écran borderless de 5,8 pouces et d'un capteur facial pour déverrouiller le smartphone.
         </description>
-        <img src="product3.png"/>
-    </product>
-
-    <product>
-        <productID>4</productID>
-        <type>laptop</type>
-        <mark>GigaByte</mark>
-        <model> AORUS 5kb laptop</model>
-        <cpu>i7-10750H 10th Gen 6 Core™</cpu>
-        <ram>16 GB RAM</ram>
-        <storage>512 GB SSD</storage>
-        <gpu> NVIDIA RTX2060 </gpu>
-        <size>14.5</size>
-        <camera>Nahimic3 3D WebCam </camera>
-        <price>12000</price>
-        <description>
+    <img src="product3.png"/>
+  </product>
+  <product>
+    <productID>4</productID>
+    <type>laptop</type>
+    <mark>GigaByte</mark>
+    <model> AORUS 5kb laptop</model>
+    <cpu>i7-10750H 10th Gen 6 Core™</cpu>
+    <ram>16 GB RAM</ram>
+    <storage>512 GB SSD</storage>
+    <gpu> NVIDIA RTX2060 </gpu>
+    <size>14.5</size>
+    <camera>Nahimic3 3D WebCam </camera>
+    <price>12000</price>
+    <description>
             AORUS 5 gaming laptop leads the industry with the latest Intel® 10th Gen Core™ i7-10750H 6 core processor,
             in addition with NVIDIA RTX graphics chip, ultra-fast 144Hz display, WINDFORCE cooling system,
             up to 6TB of storage space and next generation WiFi 6 internet connectivity.
             Lead the gamers into battle and onward to victory!
         </description>
-        <img src="product4.jpg"/>
-    </product>
-
-    <product>
-        <productID>5</productID>
-        <type>laptop</type>
-        <mark>Asus</mark>
-        <model>TUF Dash F15</model>
-        <cpu>11th Gen Intel® Core™ i7-11375H</cpu>
-        <ram>32GB of DDR4-3200 RAM</ram>
-        <storage>1 TB SSD</storage>
-        <gpu> GeForce RTX™ 3070 GPU  </gpu>
-        <size>19.9</size>
-        <camera>WebCam ProHD</camera>
-        <price>15000</price>
-        <description>
+    <img src="product4.jpg"/>
+  </product>
+  <product>
+    <productID>5</productID>
+    <type>laptop</type>
+    <mark>Asus</mark>
+    <model>TUF Dash F15</model>
+    <cpu>11th Gen Intel® Core™ i7-11375H</cpu>
+    <ram>32GB of DDR4-3200 RAM</ram>
+    <storage>1 TB SSD</storage>
+    <gpu> GeForce RTX™ 3070 GPU  </gpu>
+    <size>19.9</size>
+    <camera>WebCam ProHD</camera>
+    <price>15000</price>
+    <description>
             The all-new TUF Dash F15 puts powerful Windows 10 Pro gaming in a super slim chassis.
             Up to the latest 11th Gen Intel® Core™ i7-11375H CPU and GeForce RTX™ 3070 GPU make gaming
             smooth on up to a blazing fast 240Hz display. Even at 19.9mm thin, this TUF chassis meets rigorous
             MIL-STD durability standards, resisting everyday knocks and bumps. Up to 16.6 hours of battery lets you
             multitask more in a laptop light enough to carry into action anywhere.
         </description>
-        <img src="product5.jpg"/>
-    </product>
-
-    <product>
-        <productID>6</productID>
-        <type>laptop</type>
-        <mark>HP</mark>
-        <model>OMEN 17 LAPTOP</model>
-        <cpu>11th Gen Intel® Core™ i7-11800H</cpu>
-        <ram>32 GB DDR4-3200 RAM</ram>
-        <storage>512 GB SSD</storage>
-        <gpu>NVIDIA® GeForce RTX™ 3070 Mobile</gpu>
-        <size>17.3</size>
-        <camera>HP Wide Vision 720p HD camera</camera>
-        <price>20000</price>
-        <description>
+    <img src="product5.jpg"/>
+  </product>
+  <product>
+    <productID>6</productID>
+    <type>laptop</type>
+    <mark>HP</mark>
+    <model>OMEN 17 LAPTOP</model>
+    <cpu>11th Gen Intel® Core™ i7-11800H</cpu>
+    <ram>32 GB DDR4-3200 RAM</ram>
+    <storage>512 GB SSD</storage>
+    <gpu>NVIDIA® GeForce RTX™ 3070 Mobile</gpu>
+    <size>17.3</size>
+    <camera>HP Wide Vision 720p HD camera</camera>
+    <price>20000</price>
+    <description>
             The 17.3 diagonal inch design with high resolution,
             fast frames and optical mechanical keyboard bring all of the comforts of playing at home,
             to go. Don't worry about taking it places, it comes with great battery life so it never slows you down.
         </description>
-        <img src="product6.png"/>
-    </product>
-
-    <product>
-        <productID>7</productID>
-        <type>laptop</type>
-        <mark>HP</mark>
-        <model>Spectre x360 Convertible</model>
-        <cpu>11th Gen Intel® Core™ i7-1165G7</cpu>
-        <ram>16 GB DDR RAM</ram>
-        <storage>512 GB Intel® SSD</storage>
-        <gpu>Intel® Iris® Xe Graphics</gpu>
-        <size>14.3</size>
-        <camera>HP Wide Vision 720p HD camera</camera>
-        <price>13000</price>
-        <description>
+    <img src="product6.png"/>
+  </product>
+  <product>
+    <productID>7</productID>
+    <type>laptop</type>
+    <mark>HP</mark>
+    <model>Spectre x360 Convertible</model>
+    <cpu>11th Gen Intel® Core™ i7-1165G7</cpu>
+    <ram>16 GB DDR RAM</ram>
+    <storage>512 GB Intel® SSD</storage>
+    <gpu>Intel® Iris® Xe Graphics</gpu>
+    <size>14.3</size>
+    <camera>HP Wide Vision 720p HD camera</camera>
+    <price>13000</price>
+    <description>
             Work hard and play harder with a long battery life.
             Binge watch your favorite shows and stay connected with Gigabit WiFi connectivity.
             Experience incredible speed for editing and streaming videos in a snap with the powerful Intel® Core™ processor.
@@ -153,29 +143,43 @@
             protect yourself with the unhackable Webcam kill switch and microphone mute button that you can quickly activate
             and know it’s on or off with a LED indicator.
         </description>
-        <img src="product7.png"/>
-    </product>
-
-    <product>
-        <productID>8</productID>
-        <type>phone</type>
-        <mark>Apple</mark>
-        <model>iPhone 11</model>
-        <cpu>Hexa-core(2x2.65 GHz Lightning)</cpu>
-        <ram>4 GB RAM</ram>
-        <storage>256 GB</storage>
-        <gpu> Apple GPU (4-core graphics) </gpu>
-        <size>6.1</size>
-        <camera>12 MP, 4K f/1.8, 26mm X3 </camera>
-        <price>7000</price>
-        <description>
+    <img src="product7.png"/>
+  </product>
+  <product>
+    <productID>8</productID>
+    <type>phone</type>
+    <mark>Apple</mark>
+    <model>iPhone 11</model>
+    <cpu>Hexa-core(2x2.65 GHz Lightning)</cpu>
+    <ram>4 GB RAM</ram>
+    <storage>256 GB</storage>
+    <gpu> Apple GPU (4-core graphics) </gpu>
+    <size>6.1</size>
+    <camera>12 MP, 4K f/1.8, 26mm X3 </camera>
+    <price>7000</price>
+    <description>
             Shoot 4K videos, beautiful portraits, and sweeping landscapes with the all-new dual-camera system.
             Capture your best low-light photos with Night mode.
             See true-to-life color in your photos, videos, and games on the 6.1-inch Liquid Retina display.
             Experience unprecedented performance with A13 Bionic for gaming, augmented reality (AR),
             and photography. Do more and charge less with long-lasting battery life.
         </description>
-        <img src="product8.jpg"/>
-    </product>
+    <img src="product8.jpg"/>
+  </product>
+  <product>
+    <productID>9</productID>
+    <type>laptop</type>
+    <mark>HP</mark>
+    <model>Envy Multi-Touch</model>
+    <cpu>Core i7 4-Core (11th Gen)</cpu>
+    <ram>12 DDR4 RAM</ram>
+    <storage>1256 GB</storage>
+    <gpu>Integrated Intel Iris Xe Graphics</gpu>
+    <size>17.3</size>
+    <camera>User-Facing: 720p</camera>
+    <price>11090.99</price>
+    <description>Power through your workload or stay entertained with the 17.3" Envy Multi-Touch Laptop in natural silver from HP. An 11th Gen Intel Core i7 processor and 12GB of RAM allow you to muscle through work projects, personal computing tasks, and entertainment needs. Store important files and programs on the 256GB SSD for fast load times, while a 1TB HDD</description>
+    <img src="product9.jpg"/>
+  </product>
 
 </products>
