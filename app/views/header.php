@@ -47,11 +47,11 @@
                 </ul>
                 <?php endif;?>
                 <?php if(isset($data['user']) && (string)$data['user']->Attributes() == 'admin'): ?>
-                    <a class="nav-link link-primary text-success" href="<?= ROOT ?>admin">Admin Section</a>
+                    <a class="nav-link link-primary text-success" href="<?= ROOT . "admin"?>">Admin Section</a>
                 <?php endif;?>
 
                 <?php if(isset($data['user'])): ?>
-                    <a class="link-dark text-decoration-none mx-2 position-relative" href="#"><i class="fas fa-shopping-cart"></i><span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger pb-1" style="font-size: 8px;">0</span></a>
+                    <a class="link-dark text-decoration-none mx-2 position-relative" href="<?= ROOT . "checkout"?>"><i class="fas fa-shopping-cart"></i><span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger pb-1" style="font-size: 8px;"><?= isset($_SESSION['counter']) ? $_SESSION['counter'] : 0; ?></span></a>
                     <div class="dropdown text-end">
                         <a href="#" class="d-flex flex-row justify-content-end align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="true">
                             <img src="<?=UPLOADS . $data['user']->img->Attributes(); ?>" alt="mdo" width="32" height="32" class="rounded-circle m-1">
@@ -60,9 +60,8 @@
 
                         <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
                             <li><a class="dropdown-item" href="<?= ROOT . "profile"?>">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="<?= ROOT ?>logout">Logout</a></li>
+                            <li><a class="dropdown-item" href="<?= ROOT . "logout"?>">Logout</a></li>
                         </ul>
                     </div>
                 <?php endif;?>

@@ -95,8 +95,6 @@ input[type=number] {
   margin-right: 0 !important;
 }
 
-
-
 #img_product {
   width: 30%;
   height: 50vh;
@@ -108,16 +106,6 @@ input[type=number] {
 
   #shadow {
     border-radius: 10px;
-  }
-
-  #btn_buy {
-    transition: all .3s ease-in;
-
-    &:hover {
-      background: #ffffffba;
-      color: #0b2027;
-      transform: translateY(-5px);
-    }
   }
 }
 

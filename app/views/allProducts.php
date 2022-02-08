@@ -90,7 +90,7 @@
             <?php endif; ?>
 
             <?php foreach ($data['products'] as $product):?>
-                <div class="col" onclick="">
+                <div class="col" onclick="location.href='<?=ROOT . "products/product/" . $product->productID?>'" style="cursor: pointer;">
                     <div class="card h-100">
                         <img src="<?= UPLOADS . $product->img->Attributes()?>" alt="phone1" class="card_img">
                         <div class="card-body d-flex flex-column justify-content-between">

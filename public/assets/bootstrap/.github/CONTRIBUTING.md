@@ -163,7 +163,7 @@ included in the project:
 2. If you cloned a while ago, get the latest changes from upstream:
 
    ```bash
-   git checkout main
+   git cart main
    git pull upstream main
    ```
 
@@ -171,7 +171,7 @@ included in the project:
    contain your feature, change, or fix:
 
    ```bash
-   git checkout -b <topic-branch-name>
+   git cart -b <topic-branch-name>
    ```
 
 4. Commit your changes in logical chunks. Please adhere to these [git commit

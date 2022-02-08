@@ -10849,14 +10849,6 @@ input[type=number] {
 #img_product #shadow {
   border-radius: 10px;
 }
-#img_product #btn_buy {
-  transition: all 0.3s ease-in;
-}
-#img_product #btn_buy:hover {
-  background: #ffffffba;
-  color: #0b2027;
-  transform: translateY(-5px);
-}
 
 @media screen and (max-width: 576px) {
   #img_product {

@@ -3,7 +3,7 @@
 <span class="alert-danger align-content-center" style="text-align: center;"><?php check_error() ?></span>
 <span class="alert-success align-content-center" style="text-align: center;"><?php check_success() ?></span>
 
-<div class="form-signin my-3">
+<div class="form-signin">
     <form method="post">
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 

@@ -36,6 +36,13 @@ function show($data)
     echo "</pre>";
 }
 
+function emptyCart()
+{
+    unset($_SESSION['cart']);
+    unset($_SESSION['counter']);
+    unset($_SESSION['total']);
+}
+
 
 function generatePDF($xmlFileName, $xslFileName, $pdfFileName)
 {

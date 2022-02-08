@@ -77,4 +77,15 @@
     <createdAt>2021-12-29T02:27:31</createdAt>
     <img src="userDefault.png"/>
   </user>
+  <user rank="admin">
+    <userID>8</userID>
+    <username>walid099</username>
+    <firstName>walid</firstName>
+    <lastName>walid</lastName>
+    <email>walid@omari.com</email>
+    <password>183009328d87dcd2215d732335acf48f12289e2d</password>
+    <phone>614541965</phone>
+    <createdAt>2022-02-07T01:05:42</createdAt>
+    <img src="userDefault.png"/>
+  </user>
 </users>

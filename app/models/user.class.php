@@ -81,6 +81,7 @@ class user
         if(isset($_SESSION['userID']))
         {
             unset($_SESSION['userID']);
+            emptyCart();
             header("Location: home");
             die;
         }

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://www.w3schools.com"
+           xmlns="https://www.w3schools.com"
+           elementFormDefault="qualified">
+
+    <xs:element name="factures" type="facturesType"/>
+
+
+    <!--Defined Types:-->
+    <!--factures is a sequence of facture with no limit on occurrences-->
+    <xs:complexType name="facturesType">
+        <xs:sequence>
+            <xs:element name="facture" type="factureType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--facture is a sequence of elements that are obligatory and should appear on that exact order-->
+    <xs:complexType name="factureType">
+        <xs:sequence>
+            <xs:element name="factureID" type="xs:integer"/>
+            <xs:element name="userID" type="xs:integer" />
+            <xs:element name="userName" type="userNameType" />
+            <xs:element name="userPhone" type="phoneNumberType"/>
+            <xs:element name="date" type="xs:dateTime"/> <!--date format: yyyy-mm-ddThh:min:sec-->
+            <xs:element name="products" type="productsType"/>
+            <xs:element name="totalPrice" type="unsignedDouble"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="userNameType">
+        <xs:sequence>
+            <xs:element name="userFirstName" type="xs:string"/>
+            <xs:element name="userLastName" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--Restriction on phone number-->
+    <xs:simpleType name="phoneNumberType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{10}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--ProductsType definition: sequence of products-->
+    <xs:complexType name="productsType">
+        <xs:sequence>
+            <xs:element name="product" type="productType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--ProductType definition-->
+    <xs:complexType name="productType">
+        <xs:sequence>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="quantity" type="xs:unsignedInt"/>
+            <xs:element name="unitPrice" type="unsignedDouble"/>
+            <xs:element name="allPrice" type="unsignedDouble"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--unsignedDouble type definition-->
+    <xs:simpleType name="unsignedDouble">
+        <xs:restriction base="xs:double">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+</xs:schema>
