@@ -23,7 +23,7 @@
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
                 <div>
-                    <a class="text-decoration-none link-danger fs-5 me-3" href="<?= ROOT ?>home">EcommerceXML</a>
+                    <a class="text-decoration-none link-danger fs-5 me-3" href="<?= ROOT ?>home">MobDev</a>
                 </div>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">

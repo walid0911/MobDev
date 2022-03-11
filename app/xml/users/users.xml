@@ -88,4 +88,15 @@
     <createdAt>2022-02-07T01:05:42</createdAt>
     <img src="userDefault.png"/>
   </user>
+  <user rank="customer">
+    <userID>9</userID>
+    <username>walid0911</username>
+    <firstName>walid</firstName>
+    <lastName>omari</lastName>
+    <email>omari.walid1@gmail.com</email>
+    <password>29cfe565c173377d2c8f1d3b56507c47f300ebd2</password>
+    <phone>325423523</phone>
+    <createdAt>2022-02-25T11:54:38</createdAt>
+    <img src="user9.png"/>
+  </user>
 </users>

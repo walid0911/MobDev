@@ -2,7 +2,7 @@
 
     <div class="container-fluid bg-light px-4 py-2 border-top d-flex flex-column flex-md-row align-items-center justify-content-between">
         <div class="row mb-2 d-flex text-center">
-            <a class="text-decoration-none link-danger display-6" href="#">EcommerceXML</a>
+            <a class="text-decoration-none link-danger display-6" href="#">MobDev</a>
         </div>
         <div class="d-flex flex-row align-items-center list-group justify-content-around">
             <div class="list-unstyled"><a class="text-decoration-none link-secondary mx-2" href="<?= ROOT ?>">Home</a></div>
