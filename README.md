@@ -14,3 +14,9 @@ Login:
 
 Register:
 ![image](https://user-images.githubusercontent.com/73041562/163289826-2335ad42-0891-412f-8496-43d41738b1dd.png)
+
+Checkout : 
+![image](https://user-images.githubusercontent.com/73041562/163290051-d4b0259f-3c8d-4aee-af43-1cbf69e39c6e.png)
+
+
+....
