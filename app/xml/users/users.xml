@@ -20,7 +20,7 @@
     <password>a29c57c6894dee6e8251510d58c07078ee3f49bf</password>
     <phone>698989898</phone>
     <createdAt>2021-12-20T20:17:00</createdAt>
-    <img src="user2.JPG"/>
+    <img src="user2.jpg"/>
   </user>
   <user rank="customer">
     <userID>3</userID>
